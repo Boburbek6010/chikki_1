@@ -9,16 +9,18 @@ class IntroVM extends ChangeNotifier {
 
   PageController pageController = PageController();
   int pageIndex = 0;
+  double indicatorWidth = 6;
 
 
   void moveToNextPage() {
     pageIndex == 3 ? pageIndex : pageIndex++;
     notifyListeners();
-    if (pageIndex != 4) pageController.jumpToPage(pageIndex);
+    if (pageIndex != 3) pageController.jumpToPage(pageIndex);
   }
 
   void changeIndex(int index) {
     pageIndex = index;
+    indicatorWidth = 32;
     notifyListeners();
   }
 

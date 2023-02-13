@@ -19,6 +19,9 @@ class AppColors {
   static const cF4F4F4 = Color(0xffF4F4F4);
   static const c9DA4B1 = Color(0xff9DA4B1);
   static const c151513 = Color(0xff151513);
+  static const cD9D9D9 = Color(0xffD9D9D9);
+  static const cF5F5F5 = Color(0xffF5F5F5);
+  static const cEFEFEF = Color(0xffEFEFEF);
 
 
   // gradients

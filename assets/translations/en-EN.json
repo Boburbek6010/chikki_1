@@ -1,16 +1,14 @@
 {
-  "welcome": "Welcome",
-  "salam": "Assalomu Alaykum",
-  "iymon": "Faith",
-  "namaz": "Prayer",
-  "roza": "Fasting",
-  "zakat": "Zakat",
-  "haj": "Hajj",
-  "introIyman": "Confessing with\n the tongue and affirming\n with the heart",
-  "introNamaz": "Obligatory for\n every Muslim",
-  "introRoza": "Fasting during the\n month of Ramadan\n is obligatory for\n Muslim adults",
-  "introZakat": "charity given from\n wealth and income",
-  "introHaj": "Hajj is obligatory for\n every Muslim once\n in his life",
-  "button": "Next",
-  "buttonOne": "Get Started"
+  "chikki": "Chikki",
+  "welcome1": "тахига",
+  "welcome2": "Хуш келибсиз",
+  "messag1": "биз сизлар учун профессионал такси хизматларини тақдим етамиз",
+  "messag2": "Сизларнинг талабингизни қолдириш биринчи даражали вазифамиздир",
+  "messag3": "Келинг кунингизни Чикки билан қувноқроқ қиламиз",
+  "introRout1": "Давом етиш",
+  "introRout2": "Бошлаш",
+  "register": "Регистрация",
+  "uploadImg": "Расм юклаш",
+  "name": "Исмингиз",
+  "lastName": "Фамилиянгиз"
 }

@@ -9,10 +9,11 @@ class AppImages {
 
   // *** svg images
 
-  static final welcomeImage = SvgPicture.asset(
+  static final welcomeImageSvg = SvgPicture.asset(
     'assets/images/intro_page/first_image.svg',
     height: double.infinity,
     width: double.infinity,
+    fit: BoxFit.cover,
   );
 
 
@@ -23,13 +24,47 @@ class AppImages {
 
   ///  Png
 
-  static final doneTrue = Image.asset(
-    'assets/icons/registration_process/doneTrue.png',
-    height: 24,
-    width: 24,
+  static final welcomeImage = Image.asset(
+    'assets/images/intro_page/welcome_image.png',
+    height: double.infinity,
+    width: double.infinity,
+    fit: BoxFit.cover,
   );
 
+  static final welcomeArm = Image.asset(
+    'assets/images/intro_page/arm.png',
+    height: 50,
+    width: 50,
+    fit: BoxFit.cover,
+  );
 
+  static final introImage1 = Image.asset(
+    'assets/images/intro_page/taxi3.jpg',
+    height: 253,
+    width: 271,
+    fit: BoxFit.cover,
+  );
+
+  static final introImage2 = Image.asset(
+    'assets/images/intro_page/taxi2.jpg',
+    height: 253,
+    width: 271,
+    fit: BoxFit.cover,
+  );
+
+  static final introImage3 = Image.asset(
+    'assets/images/intro_page/taxi1.png',
+    height: 253,
+    width: 271,
+    fit: BoxFit.cover,
+  );
+
+  static final profilePerson = Image.asset(
+    'assets/images/login/person.png',
+    height: 48,
+    width: 48,
+    fit: BoxFit.contain,
+  );
 }
 
 // extension CustomSvg on SvgPicture {
