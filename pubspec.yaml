@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
 
 
   #for design
@@ -20,11 +23,18 @@ dependencies:
   #map_launcher:
   #google_maps_flutter: ^2.2.3
   yandex_mapkit: ^3.2.0
+  #locale storage
+  shared_preferences: ^2.0.17
+  #printing:
+  l: ^3.2.0
+  #localization:
+  easy_localization: ^3.0.1
 
   #stateManagment
   flutter_riverpod: ^2.2.0
 
 dev_dependencies:
+  build_runner: ^2.1.0
   flutter_test:
     sdk: flutter
 
@@ -37,6 +47,7 @@ flutter:
   assets:
     - assets/images/intro_page/
     - assets/images/
+    - assets/translations/
   #   - images/a_dot_ham.jpeg
 
   # fonts:
