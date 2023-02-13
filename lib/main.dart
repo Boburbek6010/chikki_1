@@ -1,4 +1,5 @@
 import 'package:demo1/src/features/menu/presentation/screens/home.dart';
+import 'package:demo1/src/features/welcome/presentation/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home Page
-      home: const HomePage(),
+      home:  const WelcomeScreen(),//const HomePage(),
     );
   }
 }
