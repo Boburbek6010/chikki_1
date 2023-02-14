@@ -24,7 +24,7 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const RegistrationScreen(),//HomePage(),
     );
   }
 }

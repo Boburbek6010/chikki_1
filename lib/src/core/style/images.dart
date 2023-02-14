@@ -65,6 +65,20 @@ class AppImages {
     width: 48,
     fit: BoxFit.contain,
   );
+
+  static final camera = Image.asset(
+    'assets/images/login/camera.png',
+    height: 24,
+    width: 24,
+    fit: BoxFit.contain,
+  );
+
+  static final gallery = Image.asset(
+    'assets/images/login/gallery.png',
+    height: 24,
+    width: 24,
+    fit: BoxFit.contain,
+  );
 }
 
 // extension CustomSvg on SvgPicture {

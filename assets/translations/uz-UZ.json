@@ -10,6 +10,8 @@
   "register": "Registratsiya",
   "uploadImg": "Rasm yuklash",
   "name": "Ismingiz",
-  "lastName": "Familiyangiz"
+  "lastName": "Familiyangiz",
+  "openCamera": "Kamerani ochish",
+  "openGallery": "Fayl orqali yukalsh"
 
 }
