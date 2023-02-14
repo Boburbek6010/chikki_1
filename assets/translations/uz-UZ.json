@@ -1,16 +1,3 @@
 {
-  "welcome": "Xush kelibsiz",
-  "salam": "Assalomu Alaykum",
-  "iymon": "Iymon",
-  "namaz": "Namoz",
-  "roza": "Ro'za",
-  "zakat": "Zakot",
-  "haj": "Haj",
-  "introIyman": "Til bilan iqror bo'lib\n qalb bilan tasdiqlamoq",
-  "introNamaz": "Har bir musulmon\n uchun farzdir",
-  "introRoza": "Ramazon oyida ro'za tutish musulmonlar\n uchun farzdir",
-  "introZakat": "Boylik va daromaddan beriladigan sadaqa",
-  "introHaj": "Har bir musulmonga umrida bir marta\n haj farzdir",
-  "button": "Keyingi",
-  "buttonOne": "Boshlash"
+  "welcome": "Xush kelibsiz"
 }

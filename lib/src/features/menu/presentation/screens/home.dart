@@ -1,9 +1,6 @@
-import 'package:demo1/src/core/localization/words.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:yandex_mapkit/yandex_mapkit.dart';
-
-import '../../../settings/locale_setting.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,10 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-
-  final locale = LocaleSettings();
-
 
   @override
   Widget build(BuildContext context) {

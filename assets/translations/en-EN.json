@@ -1,16 +1,3 @@
 {
-  "welcome": "Welcome",
-  "salam": "Assalomu Alaykum",
-  "iymon": "Faith",
-  "namaz": "Prayer",
-  "roza": "Fasting",
-  "zakat": "Zakat",
-  "haj": "Hajj",
-  "introIyman": "Confessing with\n the tongue and affirming\n with the heart",
-  "introNamaz": "Obligatory for\n every Muslim",
-  "introRoza": "Fasting during the\n month of Ramadan\n is obligatory for\n Muslim adults",
-  "introZakat": "charity given from\n wealth and income",
-  "introHaj": "Hajj is obligatory for\n every Muslim once\n in his life",
-  "button": "Next",
-  "buttonOne": "Get Started"
+  "welcome": "Welcome"
 }
