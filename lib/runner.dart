@@ -9,7 +9,7 @@ void run() => l.capture<void>(
       () => runZonedGuarded<void>(
         () async {
           WidgetsFlutterBinding.ensureInitialized();
-          EasyLocalization.ensureInitialized();
+          await EasyLocalization.ensureInitialized();
           await SystemChrome.setPreferredOrientations(
             [DeviceOrientation.portraitUp],
           ).then(

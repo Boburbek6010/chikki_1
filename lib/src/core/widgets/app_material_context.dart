@@ -1,5 +1,7 @@
+import 'package:demo1/src/features/welcome/presentation/screens/welcome_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import '../../features/login/presentation/screens/registration_screen.dart';
 import '../../features/menu/presentation/screens/home.dart';
 
 class AppMaterialContext extends StatefulWidget {
@@ -26,3 +28,8 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
     );
   }
 }
+/// screens
+// const HomePage()
+ // const WelcomeScreen(),
+ // const RegistrationScreen(),
+
