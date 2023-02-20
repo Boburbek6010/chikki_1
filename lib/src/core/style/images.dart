@@ -9,10 +9,10 @@ class AppImages {
 
   // *** svg images
 
-  static final welcomeImageSvg = SvgPicture.asset(
-    'assets/images/intro_page/first_image.svg',
-    height: double.infinity,
-    width: double.infinity,
+  static final personPlaceholder = SvgPicture.asset(
+    'assets/icons/login/person_placeholder.svg',
+    height: 80,
+    width: 80,
     fit: BoxFit.cover,
   );
 
@@ -25,38 +25,26 @@ class AppImages {
   ///  Png
 
   static final welcomeImage = Image.asset(
-    'assets/images/intro_page/welcome_image.png',
+    'assets/images/intro_page/welcome.png',
     height: double.infinity,
     width: double.infinity,
     fit: BoxFit.cover,
   );
 
-  static final welcomeArm = Image.asset(
-    'assets/images/intro_page/arm.png',
-    height: 50,
-    width: 50,
-    fit: BoxFit.cover,
-  );
-
-  static final introImage1 = Image.asset(
-    'assets/images/intro_page/taxi3.jpg',
-    height: 253,
-    width: 271,
-    fit: BoxFit.cover,
+  static final introImage3 = Image.asset(
+    'assets/images/intro_page/taxi3.png',
+    fit: BoxFit.fitWidth,
   );
 
   static final introImage2 = Image.asset(
-    'assets/images/intro_page/taxi2.jpg',
-    height: 253,
-    width: 271,
-    fit: BoxFit.cover,
+    'assets/images/intro_page/taxi2.png',
+    // height: 253,
+    // width: 271,
+    // fit: BoxFit.cover,
   );
 
-  static final introImage3 = Image.asset(
+  static final introImage1 = Image.asset(
     'assets/images/intro_page/taxi1.png',
-    height: 253,
-    width: 271,
-    fit: BoxFit.cover,
   );
 
   static final profilePerson = Image.asset(

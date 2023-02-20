@@ -1,4 +1,5 @@
 import 'package:demo1/src/core/style/images.dart';
+import 'package:demo1/src/features/menu/presentation/screens/home.dart';
 import 'package:demo1/src/features/welcome/view_model/intro_view_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,6 @@ class IntroScreen extends ConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Expanded(
-
             child: PageView(
               physics: const BouncingScrollPhysics(),
               controller: ref.read(introVM).pageController,
@@ -29,15 +29,15 @@ class IntroScreen extends ConsumerWidget {
               children: [
                 IntroOne(
                   image: AppImages.introImage1,
-                  message: 'messag1'.tr(),
+                  message: 'message1'.tr(),
                 ),
                 IntroOne(
                   image: AppImages.introImage2,
-                  message: 'messag2'.tr(),
+                  message: 'message2'.tr(),
                 ),
                 IntroOne(
                   image: AppImages.introImage3,
-                  message: 'messag3'.tr(),
+                  message: 'message3'.tr(),
                 ),
               ],
             ),
@@ -54,9 +54,17 @@ class IntroScreen extends ConsumerWidget {
     ),
           ),
           const SizedBox(height: 80),
-          IntroButton(onPressed: ref.read(introVM).moveToNextPage, text: ref.watch(introVM).pageIndex == 2 ? 'introRout2'.tr() : 'introRout1'.tr(),),
+          IntroButton(
+            onPressed: (){
+              if(ref.read(introVM).pageIndex == 2){
+                Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+              }else{
+                ref.read(introVM).moveToNextPage();
+              }
+            },
+            text: ref.watch(introVM).pageIndex == 2 ? 'introRout2'.tr() : 'introRout1'.tr(),
+          ),
           const SizedBox(height: 50),
-
         ],
       ),
     );

@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,7 +11,7 @@ class IntroVM extends ChangeNotifier {
 
 
   void moveToNextPage() {
-    pageIndex == 3 ? pageIndex : pageIndex++;
+    pageIndex == 2 ? pageIndex : pageIndex++;
     notifyListeners();
     if (pageIndex != 3) pageController.jumpToPage(pageIndex);
   }

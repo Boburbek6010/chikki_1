@@ -1,15 +1,16 @@
 {
   "chikki": "Chikki",
   "welcome1": "taxiga",
-  "welcome2": "Xush kelibsiz",
-  "messag1": "biz sizlar uchun\nprofessional taksi\nxizmatlarini taqdim etamiz",
-  "messag2": "Sizlarning talabingizni qoldirish birinchi darajali vazifamizdir",
-  "messag3": "Keling kuningizni Chikki bilan quvnoqroq qilamiz",
+  "welcome2": "Xush kelibsiz \uD83D\uDC4B",
+  "message1": "Biz sizlar uchun\nprofessional taksi\nxizmatlarini taqdim etamiz",
+  "message2": "Sizlarning talabingizni qoldirish birinchi darajali vazifamizdir",
+  "message3": "Keling kuningizni Chikki bilan quvnoqroq qilamiz",
   "introRout1": "Davom etish",
   "introRout2": "Boshlash",
   "register": "Registratsiya",
   "uploadImg": "Rasm yuklash",
   "name": "Ismingiz",
-  "lastName": "Familiyangiz"
+  "lastName": "Familiyangiz",
+  "enterApp": "Ilovaga kirish"
 
 }
