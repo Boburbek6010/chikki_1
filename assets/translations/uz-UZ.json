@@ -11,6 +11,8 @@
   "uploadImg": "Rasm yuklash",
   "name": "Ismingiz",
   "lastName": "Familiyangiz",
-  "enterApp": "Ilovaga kirish"
+  "enterApp": "Ilovaga kirish",
+  "openCamera": "Kamerani ochish",
+  "openGallery": "Fayl orqali yukalsh"
 
 }
