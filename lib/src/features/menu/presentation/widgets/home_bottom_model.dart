@@ -15,6 +15,8 @@ class HomeModelBottomSheet extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
+
+        /// Locator
         Padding(
           padding: const EdgeInsets.only(right: 15, bottom: 15),
           child: MaterialButton(
@@ -31,6 +33,9 @@ class HomeModelBottomSheet extends ConsumerWidget {
             child: AppImages.homeLocator,
           ),
         ),
+
+
+        /// modal bottom sheet
         Container(
           height: 170,
           width: double.infinity,
@@ -169,6 +174,7 @@ class HomeModelBottomSheet extends ConsumerWidget {
             ],
           ),
         ),
+
       ],
     );
   }

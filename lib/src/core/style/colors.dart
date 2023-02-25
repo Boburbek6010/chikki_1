@@ -25,6 +25,8 @@ class AppColors {
   static const cE8E9EB = Color(0xffE8E9EB);
   static const cFCFCFC = Color(0xffFCFCFC);
   static const c6F767E = Color(0xff6F767E);
+  static const c616161 = Color(0xff616161);
+
 
 
   // gradients
