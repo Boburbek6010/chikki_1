@@ -22,17 +22,31 @@ dependencies:
 
 
   #map_launcher:
-  #google_maps_flutter: ^2.2.3
   yandex_mapkit: ^3.2.0
+  geolocator: ^9.0.2
+
+
   #locale storage
   shared_preferences: ^2.0.17
+
+
   #printing:
   l: ^3.2.0
+
+
   #localization:
   easy_localization: ^3.0.1
 
+
   #stateManagment
   flutter_riverpod: ^2.2.0
+
+
+  #toast
+  fluttertoast: ^8.1.1
+
+  modal_bottom_sheet: ^2.1.2
+
 
 dev_dependencies:
   build_runner: ^2.1.0
@@ -46,11 +60,13 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/intro_page/
     - assets/images/
-    - assets/translations/
+    - assets/images/intro_page/
     - assets/images/login/
+    - assets/images/home/
+    - assets/translations/
     - assets/icons/login/
+    - assets/icons/home/
   #   - images/a_dot_ham.jpeg
 
   # fonts:

@@ -16,6 +16,30 @@ class AppImages {
     fit: BoxFit.cover,
   );
 
+  static final homeLocator = SvgPicture.asset(
+    'assets/icons/home/home_locator.svg',
+    height: 22,
+    width: 22,
+    fit: BoxFit.cover,
+  );
+
+  static final homeCenterLocator = SvgPicture.asset(
+    'assets/icons/home/live_location.svg',
+    height: 48,
+    width: 48,
+    fit: BoxFit.cover,
+  );
+
+  static final homeLeadingButton = SvgPicture.asset(
+    'assets/icons/home/home_leading_button.svg',
+    height: 14,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+  //
+
+
+
 
 
   // !!!
@@ -34,6 +58,41 @@ class AppImages {
   static final introImage3 = Image.asset(
     'assets/images/intro_page/taxi3.png',
     fit: BoxFit.fitWidth,
+  );
+
+  static final homeModalBottomSheetCar = Image.asset(
+    'assets/images/home/home_modal_bottom_sheet_car.png',
+    height: 26,
+    width: 26,
+    fit: BoxFit.cover,
+  );
+
+  static final homeChikkiFood = Image.asset(
+    'assets/images/home/home_chikki_food.png',
+    height: 26,
+    width: 26,
+    fit: BoxFit.cover,
+  );
+
+  static final homeCar1 = Image.asset(
+    'assets/images/home/car1.png',
+    height: 49,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
+  static final homeCar2 = Image.asset(
+    'assets/images/home/car2.png',
+    height: 49,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
+  static final homeCar3 = Image.asset(
+    'assets/images/home/car3.png',
+    height: 49,
+    width: 24,
+    fit: BoxFit.cover,
   );
 
   static final introImage2 = Image.asset(

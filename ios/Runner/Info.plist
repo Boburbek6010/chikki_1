@@ -41,6 +41,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Allow access your photo library</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Allow access your phone's camera</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow the app to record using your phone's microphone</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>

@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../../core/style/colors.dart';
 import '../../../../core/style/images.dart';
 
-typedef OnPressedUpload = void Function();
-
 class UploadImg extends StatelessWidget {
 
-  final OnPressedUpload onPressedUpload;
+  final VoidCallback onPressedUpload;
 
   const UploadImg({Key? key, required this.onPressedUpload}) : super(key: key);
 
@@ -24,7 +22,6 @@ class UploadImg extends StatelessWidget {
           decoration: const  BoxDecoration(
             shape: BoxShape.circle,
             color: AppColors.cF4F4F4,
-
           ),
           child: AppImages.personPlaceholder,
         ),
