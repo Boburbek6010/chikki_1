@@ -13,6 +13,9 @@
   "lastName": "Фамилия",
   "enterApp": "Войдите в приложение",
   "openCamera": "Открыть камеру",
-  "openGallery": "Скачать через файл"
+  "openGallery": "Скачать через файл",
+  "yourRout": "Ваш маршрут",
+  "arrivalAddress": "Адрес прибытия",
+  "buttonCart": "Карты"
 
 }

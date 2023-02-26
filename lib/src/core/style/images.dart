@@ -16,6 +16,13 @@ class AppImages {
     fit: BoxFit.cover,
   );
 
+  static final search = SvgPicture.asset(
+    'assets/icons/order/search-icon.svg',
+    height: 24,
+    width: 24,
+    // fit: BoxFit.cover,
+  );
+
 
 
   // !!!

@@ -13,6 +13,9 @@
   "lastName": "Familiyangiz",
   "enterApp": "Ilovaga kirish",
   "openCamera": "Kamerani ochish",
-  "openGallery": "Fayl orqali yukalsh"
+  "openGallery": "Fayl orqali yukalsh",
+  "yourRout": "Sizning mashrutingiz",
+  "arrivalAddress": "Yetib borish manzili",
+  "buttonCart": "Karta"
 
 }

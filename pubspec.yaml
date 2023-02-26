@@ -51,6 +51,7 @@ flutter:
     - assets/translations/
     - assets/images/login/
     - assets/icons/login/
+    - assets/icons/order/
   #   - images/a_dot_ham.jpeg
 
   # fonts:
