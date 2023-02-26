@@ -19,6 +19,8 @@ class HomeVm extends ChangeNotifier {
   late final PlacemarkMapObject stopPlaceMarks;
   late Future<DrivingSessionResult> result;
   bool progress = false;
+  bool isRouteChosen = true;
+
 
   HomeVm() {
     initState();
