@@ -12,6 +12,7 @@ class SearchRoutVM extends ChangeNotifier {
   TextEditingController goLocationController = TextEditingController();
   List<MocSearch> locate = [];
   List<MocSearch> searchLocateList = [];
+  bool autoFocus = false;
 
   void closePage(BuildContext context) {
     Navigator.pop(context);
@@ -30,6 +31,12 @@ class SearchRoutVM extends ChangeNotifier {
     }else{
       locate = searchLocateList.where((element) => element.street.toString().toLowerCase().contains(search.toLowerCase())).toList();
     }
+    notifyListeners();
+  }
+
+  void selectLocate(int id, String street){
+    goLocationController.text = street;
+    autoFocus = false;
     notifyListeners();
   }
 

@@ -19,6 +19,8 @@ dependencies:
   flutter_svg: ^2.0.0+1
   smooth_page_indicator: ^1.0.1
   image_picker: ^0.8.6+1
+  lottie: ^2.2.0
+  linear_timer: ^2.0.0
 
 
   #map_launcher:
@@ -68,6 +70,7 @@ flutter:
     - assets/icons/login/
     - assets/icons/order/
     - assets/icons/home/
+    - assets/lottle/
   #   - images/a_dot_ham.jpeg
 
   # fonts:

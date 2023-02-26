@@ -18,6 +18,6 @@ class AppRoutes{
     AppRouteName.HOME: (context) => const HomeScreen(),
     AppRouteName.SETPROFILE: (context) => const SetProfileScreen(),
     AppRouteName.REGISTER: (context) => const RegisterScreen(),
-    AppRouteName.SEARCHROUTE: (context) => const SearchRoutScreen(),
+    AppRouteName.SEARCHROUTE: (context) =>   const SearchRoutScreen(),
   };
 }
