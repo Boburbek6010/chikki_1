@@ -3,6 +3,7 @@ import 'package:demo1/src/core/routes/app_routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+
 class AppMaterialContext extends StatefulWidget {
   const AppMaterialContext({Key? key}) : super(key: key);
 
@@ -23,7 +24,7 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: AppRouteName.HOME,
+      initialRoute: AppRouteName.SEARCHROUTE,
       routes: AppRoutes.routes,
     );
   }

@@ -13,5 +13,8 @@
   "lastName": "Фамилиянгиз",
   "enterApp": "Иловага кирищ",
   "openCamera": "Камерани очиш",
-  "openGallery": "Файл орқали юкалш"
+  "openGallery": "Файл орқали юкалш",
+  "yourRout": "Сизнинг машрутингиз",
+  "arrivalAddress": "Йетиб бориш манзили",
+  "buttonCart": "Карта"
 }

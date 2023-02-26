@@ -66,6 +66,7 @@ flutter:
     - assets/images/home/
     - assets/translations/
     - assets/icons/login/
+    - assets/icons/order/
     - assets/icons/home/
   #   - images/a_dot_ham.jpeg
 

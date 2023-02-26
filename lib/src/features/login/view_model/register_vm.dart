@@ -11,9 +11,6 @@ class RegisterVM extends ChangeNotifier {
   CameraDevice? device;
   final ImagePicker picker = ImagePicker();
 
-
-
-
   void gallery(BuildContext context) async{
     Navigator.of(context).pop();
     final XFile? image = await picker.pickImage(source: ImageSource.gallery);
