@@ -1,6 +1,5 @@
-import 'package:demo1/src/features/login/presentation/screens/register_screen.dart';
-import 'package:demo1/src/features/welcome/presentation/screens/intro_screen.dart';
-import 'package:demo1/src/features/welcome/presentation/screens/welcome_screen.dart';
+import 'package:demo1/src/core/routes/app_route_name.dart';
+import 'package:demo1/src/core/routes/app_routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../../features/login/presentation/screens/set_profile_screen.dart';
@@ -27,15 +26,8 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/searchRoute',
-      routes: {
-        '/initial': (context) => const WelcomeScreen(),
-        '/intro': (context) => const IntroScreen(),
-        '/home': (context) => const HomeScreen(),
-        '/set_profile': (context) => const SetProfileScreen(),
-        '/register': (context) => const RegisterScreen(),
-        '/searchRoute': (context) => const SearchRoutScreen(),
-      },
+      initialRoute: AppRouteName.HOME,
+      routes: AppRoutes.routes,
     );
   }
 }

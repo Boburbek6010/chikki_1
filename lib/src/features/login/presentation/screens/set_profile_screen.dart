@@ -49,7 +49,7 @@ class SetProfileScreen extends ConsumerWidget {
                   shape: BoxShape.circle,
                   color: AppColors.cF4F4F4,
                 ),
-                child:  AppImages.profilePerson,
+                child:  AppImages.personPlaceholder,
               )
                   :
               // select
