@@ -1,12 +1,15 @@
 import 'dart:async';
 
 import 'package:demo1/src/core/style/colors.dart';
+import 'package:demo1/src/data/entity/yandex_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:l/l.dart';
 import 'package:yandex_mapkit/yandex_mapkit.dart';
+
+import '../../../data/repository/app_repository_impl.dart';
 
 
 final homeVM = ChangeNotifierProvider((ref) => HomeVm());
@@ -21,11 +24,12 @@ class HomeVm extends ChangeNotifier {
   bool progress = false;
   bool isRouteChosen = true;
 
-
   HomeVm() {
     initState();
-    l.d(mapObjects);
   }
+
+
+
 
   /// creating map
   void onMapCreated(YandexMapController controller1) {

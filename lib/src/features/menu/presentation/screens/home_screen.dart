@@ -16,6 +16,7 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       body: Stack(
         children: [
+
           YandexMap(
             nightModeEnabled: true,
             modelsEnabled: true,
@@ -44,7 +45,7 @@ class HomeScreen extends ConsumerWidget {
           ),
            const HomeCarsPositions(),
         ],
-      ),
+      )
     );
   }
 }

@@ -24,7 +24,7 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: AppRouteName.SEARCHROUTE,
+      initialRoute: AppRouteName.HOME,
       routes: AppRoutes.routes,
     );
   }

@@ -1,6 +1,6 @@
 import 'package:demo1/src/core/style/images.dart';
 import 'package:demo1/src/core/style/text_style.dart';
-import 'package:demo1/src/features/order/view_model/MocSearch.dart';
+import 'package:demo1/src/data/entity/yandex_routes.dart';
 import 'package:demo1/src/features/order/view_model/search_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,6 +14,7 @@ class SearchRoutScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // ref.watch(searchRouteVM);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
@@ -118,7 +119,7 @@ class SearchRoutScreen extends ConsumerWidget {
             child: ListView.builder(
               itemCount: ref.watch(searchRouteVM).locate.length,
               itemBuilder: (context, index){
-                MocSearch locate = ref.read(searchRouteVM).locate[index];
+                Feature locate = ref.read(searchRouteVM).locate[index];
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                  // mainAxisAlignment: MainAxisAlignment.center,
@@ -129,8 +130,8 @@ class SearchRoutScreen extends ConsumerWidget {
                        padding:  EdgeInsets.all(8.0),
                        child:  Icon(Icons.radio_button_off, weight: 4, color: AppColors.c9DA4B1, size: 20,),
                      ),
-                     title: Text(locate.street!, style: Theme.of(context).textTheme.titleSmall),
-                     subtitle: Text('${locate.city!}, ${locate.counter!}', style: Theme.of(context).textTheme.labelSmall?.copyWith(color: AppColors.c9DA4B1, fontSize: FontSize.size12)),
+                     title: Text(locate.properties.name, style: Theme.of(context).textTheme.titleSmall),
+                     subtitle: Text(locate.properties.description,  style: Theme.of(context).textTheme.labelSmall?.copyWith(color: AppColors.c9DA4B1, fontSize: FontSize.size12)),
                      trailing: const Icon(CupertinoIcons.location_solid),
                       minVerticalPadding: 10,
                        isThreeLine: false,
