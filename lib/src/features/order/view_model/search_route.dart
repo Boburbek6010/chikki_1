@@ -27,11 +27,6 @@ class SearchRoutVM extends ChangeNotifier {
     notifyListeners();
   }
 
-
-  // void getAllLocate(){
-  //   locate = categoriesMock.map((category) => MocSearch.fromJson(category)).toList();
-  // }
-
   void searchLocate(String search){
     // locate = categoriesMock.map((category) => MocSearch.fromJson(category)).toList();
     searchLocateList = locate;
@@ -41,6 +36,12 @@ class SearchRoutVM extends ChangeNotifier {
     }else{
       locate = searchLocateList.where((element) => element.properties.name.toString().toLowerCase().contains(search.toLowerCase())).toList();
     }
+    notifyListeners();
+  }
+
+  void selectLocate(int id, String street){
+    goLocationController.text = street;
+    autoFocus = false;
     notifyListeners();
   }
 
