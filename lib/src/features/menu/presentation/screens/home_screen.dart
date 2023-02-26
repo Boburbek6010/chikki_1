@@ -42,7 +42,7 @@ class HomeScreen extends ConsumerWidget {
               HomeModelBottomSheet(),
             ],
           ),
-          const HomeCarsPositions(),
+           const HomeCarsPositions(),
         ],
       ),
     );

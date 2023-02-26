@@ -37,7 +37,7 @@ class SearchRoutScreen extends ConsumerWidget {
           Container(
             width: double.infinity,
             height: 50,
-            margin: const  EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            margin: const  EdgeInsets.symmetric(horizontal: 15, vertical: 4),
             decoration: BoxDecoration(
               color: AppColors.cF4F4F4,
               borderRadius: BorderRadius.circular(12),
@@ -46,9 +46,16 @@ class SearchRoutScreen extends ConsumerWidget {
               controller: ref.read(searchRouteVM).myLocationController,
               style: Theme.of(context).textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w600),
               textAlignVertical: TextAlignVertical.center,
-              decoration: const InputDecoration(
-                  prefixIcon: Icon(Icons.radio_button_checked_sharp, color: AppColors.c0094FF,),
-                  border: InputBorder.none,
+              decoration:  InputDecoration(
+                  prefixIcon: const Icon(Icons.radio_button_checked_sharp, color: AppColors.c0094FF,),
+                  focusedBorder:  OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: const BorderSide(
+                    color: AppColors.c2AC1BC,
+                    width: 2,
+                  ),
+                ),
+                  border: InputBorder.none
               ),
             ),
           ),
@@ -118,11 +125,15 @@ class SearchRoutScreen extends ConsumerWidget {
                  mainAxisSize: MainAxisSize.min,
                  children: [
                    ListTile(
-                     leading: const Icon(Icons.radio_button_off, weight: 4, color: AppColors.c9DA4B1,),
+                     leading: const Padding(
+                       padding:  EdgeInsets.all(8.0),
+                       child:  Icon(Icons.radio_button_off, weight: 4, color: AppColors.c9DA4B1, size: 20,),
+                     ),
                      title: Text(locate.street!, style: Theme.of(context).textTheme.titleSmall),
                      subtitle: Text('${locate.city!}, ${locate.counter!}', style: Theme.of(context).textTheme.labelSmall?.copyWith(color: AppColors.c9DA4B1, fontSize: FontSize.size12)),
                      trailing: const Icon(CupertinoIcons.location_solid),
-                      minVerticalPadding: 18,
+                      minVerticalPadding: 10,
+                       isThreeLine: false,
                    ),
                    const Divider(thickness: 1, indent: 75, endIndent: 20,)
 

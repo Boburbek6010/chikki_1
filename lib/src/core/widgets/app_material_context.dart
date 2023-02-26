@@ -2,9 +2,7 @@ import 'package:demo1/src/core/routes/app_route_name.dart';
 import 'package:demo1/src/core/routes/app_routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../features/login/presentation/screens/set_profile_screen.dart';
-import '../../features/menu/presentation/screens/home.dart';
-import '../../features/order/presentation/screens/search_rout_screen.dart';
+
 
 class AppMaterialContext extends StatefulWidget {
   const AppMaterialContext({Key? key}) : super(key: key);
@@ -26,7 +24,7 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: AppRouteName.HOME,
+      initialRoute: AppRouteName.SEARCHROUTE,
       routes: AppRoutes.routes,
     );
   }

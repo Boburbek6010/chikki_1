@@ -132,7 +132,7 @@ class HomeVm extends ChangeNotifier {
           requestPointType: RequestPointType.wayPoint,
         ),
       ],
-      drivingOptions: const DrivingOptions(initialAzimuth: 0, routesCount: 1, avoidTolls: true, avoidPoorConditions: true, avoidUnpaved: true),
+      drivingOptions: const DrivingOptions(initialAzimuth: 0, routesCount: 2, avoidTolls: true, avoidPoorConditions: true, avoidUnpaved: true),
     );
     result = resultSession.result;
     notifyListeners();
