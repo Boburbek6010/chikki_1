@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:l/l.dart';
 
 import '../../../../core/style/colors.dart';
+import '../../../order/presentation/screens/search_rout_screen.dart';
 
 class HomeModelBottomSheet extends ConsumerWidget {
   const HomeModelBottomSheet({Key? key}) : super(key: key);
@@ -80,7 +81,7 @@ class HomeModelBottomSheet extends ConsumerWidget {
                     borderRadius: BorderRadius.circular(12)
                   ),
                   onPressed: (){
-                    Navigator.of(context).pushNamed(AppRouteName.SEARCHROUTE);
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchRoutScreen(myLocate: ref.read(homeVM).nameOfCurrentLocation,)));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,

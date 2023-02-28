@@ -10,4 +10,11 @@ class AppRepositoryImpl implements AppRepository{
     return data.features;
   }
 
+  @override
+  Future<String> getCurrentLocation(String nameController) async {
+    final response = await NetworkService.GET(NetworkService.apiGetAllRoutes, NetworkService.paramsCurrentLocation(nameController));
+    final data = yandexRoutesModelFromJson(response);
+    return data.features.first.properties.geocoderMetaData.text;
+  }
+
 }

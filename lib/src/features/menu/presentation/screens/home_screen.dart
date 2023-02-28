@@ -5,7 +5,9 @@ import 'package:linear_timer/linear_timer.dart';
 import 'package:lottie/lottie.dart';
 import 'package:yandex_mapkit/yandex_mapkit.dart';
 
+import '../../../../core/global_keys.dart';
 import '../../../../core/style/colors.dart';
+import '../../../../core/style/images.dart';
 import '../widgets/home_bottom_model.dart';
 import '../widgets/home_cars_position.dart';
 import '../widgets/home_drawer_builder.dart';
@@ -43,7 +45,9 @@ class HomeScreen extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
-              HomeDrawerBuilder(),
+              HomeDrawerBuilder(
+                child: customGlobalKey.isManualMapChosen ?const Icon(Icons.arrow_back)  :AppImages.homeLeadingButton,
+              ),
               HomeModelBottomSheet(),
 
             ],
@@ -52,7 +56,7 @@ class HomeScreen extends ConsumerWidget {
           ElevatedButton(onPressed: (){
             dialog(context: context);
           },
-              child: Text('dialog'))
+              child: const Text('dialog'))
 
         ],
       )
@@ -69,8 +73,7 @@ class FindCarProcess extends StatelessWidget {
   }
 }
 
-dialog(
-    {required BuildContext context}){
+dialog({required BuildContext context}){
   return showGeneralDialog(
     context: context,
     pageBuilder: (context, animation, secondaryAnimation) => Scaffold(

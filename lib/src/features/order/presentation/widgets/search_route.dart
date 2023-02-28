@@ -1,7 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import '../../../../core/global_keys.dart';
 import '../../../../core/style/colors.dart';
 import '../../../../core/style/images.dart';
+import '../../../menu/view_model/home_view_model.dart';
 
 
 
@@ -9,8 +11,7 @@ class RouteField extends StatelessWidget {
   final TextEditingController myLocationController;
   final TextEditingController goLocationController;
   final VoidCallback onPressed;
-  final bool avtoFocus;
-  const RouteField({Key? key, required this.myLocationController, required this.goLocationController, required this.onPressed, required this.avtoFocus}) : super(key: key);
+  const RouteField({Key? key, required this.myLocationController, required this.goLocationController, required this.onPressed,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +53,6 @@ class RouteField extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           child:  TextField(
-            autofocus: avtoFocus,
             controller: goLocationController,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w600),
             textAlignVertical: TextAlignVertical.center,
@@ -79,7 +79,9 @@ class RouteField extends StatelessWidget {
                     ),
                     const SizedBox(width: 9),
                     ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        isManualMapChosen = true;
+                      },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.c2AC1BC,
                           shape: RoundedRectangleBorder(
@@ -95,7 +97,9 @@ class RouteField extends StatelessWidget {
                 hintStyle: Theme.of(context).textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w400, color: AppColors.c9DA4B1),
                 hintText: 'arrivalAddress'.tr()
             ),
-            onChanged: (v) =>  onPressed(),
+            onChanged: (v) {
+              onPressed();
+            },
           ),
         ),
         const SizedBox(height: 15)

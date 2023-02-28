@@ -16,6 +16,7 @@ class SearchRoutVM extends ChangeNotifier {
   bool isLoading = false;
 
   void closePage(BuildContext context) {
+
     Navigator.pop(context);
   }
 
@@ -23,16 +24,14 @@ class SearchRoutVM extends ChangeNotifier {
   Future<void> getAllProperties() async {
     final response = await AppRepositoryImpl().getAllRoutes(goLocationController.text.trim().toString(), 'uz');
     locate = response;
-    l.w(locate.first);
+    l.w(locate.first.properties.name);
     notifyListeners();
   }
 
   void searchLocate(String search){
-    // locate = categoriesMock.map((category) => MocSearch.fromJson(category)).toList();
     searchLocateList = locate;
-    notifyListeners();
     if(search.isEmpty){
-      locate = [];
+      // locate = [];
     }else{
       locate = searchLocateList.where((element) => element.properties.name.toString().toLowerCase().contains(search.toLowerCase())).toList();
     }
@@ -41,7 +40,6 @@ class SearchRoutVM extends ChangeNotifier {
 
   void selectLocate(int id, String street){
     goLocationController.text = street;
-    autoFocus = false;
     notifyListeners();
   }
 

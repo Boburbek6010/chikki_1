@@ -31,6 +31,8 @@ class YandexRoutesModel {
   };
 }
 
+Feature featureModelFromJson(String str) => Feature.fromJson(json.decode(str));
+
 class Feature {
   Feature({
     required this.type,
@@ -80,64 +82,55 @@ class FeatureProperties {
     required this.name,
     required this.description,
     required this.boundedBy,
-    required this.companyMetaData,
+    required this.geocoderMetaData,
   });
 
   String name;
   String description;
   List<List<double>> boundedBy;
-  CompanyMetaData companyMetaData;
+  GeocoderMetaData geocoderMetaData;
 
   factory FeatureProperties.fromJson(Map<String, dynamic> json) => FeatureProperties(
     name: json["name"],
     description: json["description"],
     boundedBy: List<List<double>>.from(json["boundedBy"].map((x) => List<double>.from(x.map((x) => x?.toDouble())))),
-    companyMetaData: CompanyMetaData.fromJson(json["CompanyMetaData"]),
+    geocoderMetaData: GeocoderMetaData.fromJson(json["GeocoderMetaData"]),
   );
 
   Map<String, dynamic> toJson() => {
     "name": name,
     "description": description,
     "boundedBy": List<dynamic>.from(boundedBy.map((x) => List<dynamic>.from(x.map((x) => x)))),
-    "CompanyMetaData": companyMetaData.toJson(),
+    "geocoderMetaData": geocoderMetaData.toJson(),
   };
 }
 
-class CompanyMetaData {
-  CompanyMetaData({
-    required this.id,
-    required this.name,
-    required this.address,
-    required this.url,
-    required this.phones,
-    required this.categories,
+
+class GeocoderMetaData {
+  GeocoderMetaData({
+    required this.precision,
+    required this.text,
+    required this.kind,
   });
 
-  String id;
-  String name;
-  String address;
-  String url;
-  List<Phone> phones;
-  List<Category> categories;
+  String precision;
+  String text;
+  String kind;
 
-  factory CompanyMetaData.fromJson(Map<String, dynamic> json) => CompanyMetaData(
-    id: json["id"],
-    name: json["name"],
-    address: json["address"],
-    url: json["url"],
-    phones: List<Phone>.from(json["Phones"].map((x) => Phone.fromJson(x))),
-    categories: List<Category>.from(json["Categories"].map((x) => Category.fromJson(x))),
+  factory GeocoderMetaData.fromJson(Map<String, dynamic> json) => GeocoderMetaData(
+    precision: json["precision"],
+    text: json["text"],
+    kind: json["kind"],
   );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "name": name,
-    "address": address,
-    "url": url,
-    "Phones": List<dynamic>.from(phones.map((x) => x.toJson())),
-    "Categories": List<dynamic>.from(categories.map((x) => x.toJson())),
+    "precision": precision,
+    "text": text,
+    "kind": kind,
   };
 }
+
+
 
 class Category {
   Category({

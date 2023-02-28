@@ -98,11 +98,25 @@ class NetworkService {
 
   static Map<String, String> paramsYandex(String text, String lang) {
     Map<String, String> map = {
-      'apikey':'e192c2f0-42a8-4188-8789-10a760589388',
+      'apikey':'b59d43fa-2d75-4f5e-9478-0ff16c97e122',
       'text':text,
       'lang':lang,
-      'bbox':'37.184341,55.996672~45.605241,73.150164'
+      'bbox':'37.184341,55.996672~45.605241,73.150164',
     };
     return map;
   }
+
+  static Map<String, String> paramsCurrentLocation(String text) {
+    Map<String, String> map = {
+      'apikey':'b59d43fa-2d75-4f5e-9478-0ff16c97e122',
+      'text':text,
+      'lang':'uz',
+      'bbox':'37.184341,55.996672~45.605241,73.150164',
+      'type':'geo',
+      'results':'1'
+    };
+    return map;
+  }
+
+
 }

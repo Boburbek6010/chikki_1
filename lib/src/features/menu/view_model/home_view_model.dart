@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:demo1/src/core/style/colors.dart';
-import 'package:demo1/src/data/entity/yandex_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -12,7 +11,13 @@ import 'package:yandex_mapkit/yandex_mapkit.dart';
 import '../../../data/repository/app_repository_impl.dart';
 
 
+
+
 final homeVM = ChangeNotifierProvider((ref) => HomeVm());
+
+bool isManualMapChosen = false;
+
+
 class HomeVm extends ChangeNotifier {
   static final Completer<YandexMapController> _completer = Completer();
   late final YandexMapController controller;
@@ -22,19 +27,11 @@ class HomeVm extends ChangeNotifier {
   late final PlacemarkMapObject stopPlaceMarks;
   late Future<DrivingSessionResult> result;
   bool progress = false;
-  bool isRouteChosen = true;
+  late String nameOfCurrentLocation;
+  late List<String> list;
 
   HomeVm() {
     initState();
-  }
-
-
-
-
-  /// creating map
-  void onMapCreated(YandexMapController controller1) {
-    _completer.complete(controller1);
-    controller = controller1;
   }
 
   /// initializing when app started
@@ -48,6 +45,27 @@ class HomeVm extends ChangeNotifier {
       controller.moveCamera(CameraUpdate.zoomTo(13.5));
       myLocation(Point(latitude: myLivePosition.latitude, longitude: myLivePosition.longitude));
     });
+  }
+
+  /// creating map
+  void onMapCreated(YandexMapController controller1) {
+    _completer.complete(controller1);
+    controller = controller1;
+  }
+
+  /// taking string name of lat long
+  Future<void> getCurrentLocation() async {
+    final response = await AppRepositoryImpl().getCurrentLocation('${myLivePosition.latitude},${myLivePosition.longitude}');
+    nameOfCurrentLocation = response;
+    list = nameOfCurrentLocation.split(',');
+    String item = '';
+    var reversed = list.reversed;
+    for(int i = 0; i < reversed.toList().length; i++){
+     item += '${reversed.toList()[i]},';
+    }
+    nameOfCurrentLocation = '';
+    nameOfCurrentLocation = item.substring(1,item.length);
+    notifyListeners();
   }
 
   /// allow to access location permission and taking current location
@@ -70,6 +88,7 @@ class HomeVm extends ChangeNotifier {
       Fluttertoast.showToast(msg: 'Permission is dined forever');
     }
     myLivePosition = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.best);
+    await getCurrentLocation();
     return null;
   }
 
