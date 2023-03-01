@@ -1,10 +1,12 @@
+import 'package:demo1/src/core/global_keys.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/style/colors.dart';
 import '../../../../core/style/images.dart';
 
 class HomeDrawerBuilder extends StatelessWidget {
-  const HomeDrawerBuilder({Key? key}) : super(key: key);
+  final Widget child;
+  const HomeDrawerBuilder({required this.child, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class HomeDrawerBuilder extends StatelessWidget {
         shape: const CircleBorder(),
         splashColor: AppColors.c2AC1BC,
         onPressed: () {},
-        child: AppImages.homeLeadingButton,
+        child: child,
       ),
     );
   }

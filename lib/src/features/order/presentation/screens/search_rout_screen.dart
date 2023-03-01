@@ -1,10 +1,13 @@
-import 'package:demo1/src/features/order/view_model/MocSearch.dart';
+import 'package:demo1/src/core/global_keys.dart';
+import 'package:demo1/src/data/entity/yandex_routes.dart';
 import 'package:demo1/src/features/order/view_model/search_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:l/l.dart';
 
 import '../../../../core/style/colors.dart';
+import '../../../menu/view_model/home_view_model.dart';
 import '../widgets/search_locations.dart';
 import '../widgets/search_route.dart';
 
@@ -14,7 +17,8 @@ class SearchRoutScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.read(searchRouteVM).myLocationController.text = myLocate!;
+    ref.watch(searchRouteVM);
+    ref.read(searchRouteVM).myLocationController.text = myLocate ?? 'error';
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
@@ -22,7 +26,10 @@ class SearchRoutScreen extends ConsumerWidget {
         backgroundColor: AppColors.white,
         leading: IconButton(
           splashRadius: 25,
-          onPressed: () => ref.read(searchRouteVM).closePage(context),
+          onPressed: () {
+            isManualMapChosen = false;
+            ref.read(searchRouteVM).closePage(context);
+          },
           icon: const Icon(Icons.arrow_back_ios, color: AppColors.c9DA4B1, size: 22,),
         ),
         title: Text('yourRout'.tr(), style: Theme.of(context).textTheme.labelLarge?.copyWith(fontWeight: FontWeight.w600),),
@@ -34,14 +41,24 @@ class SearchRoutScreen extends ConsumerWidget {
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(130),
-          child: RouteField(myLocationController: ref.read(searchRouteVM).myLocationController, goLocationController: ref.read(searchRouteVM).goLocationController, onPressed: () => ref.watch(searchRouteVM).searchLocate(ref.read(searchRouteVM).goLocationController.text), avtoFocus: ref.read(searchRouteVM).autoFocus,),
+          child: RouteField(
+              myLocationController: ref.read(searchRouteVM).myLocationController,
+              goLocationController: ref.read(searchRouteVM).goLocationController,
+              onPressed: () {
+                Navigator.of(context).pop();
+                if(ref.read(searchRouteVM).goLocationController.text.trim() != ''){
+                  l.d('gooo');
+                  ref.read(searchRouteVM).getAllProperties();
+                }
+                ref.watch(searchRouteVM).searchLocate(ref.watch(searchRouteVM).goLocationController.text);
+              }),
         ),
       ),
       body: ListView.builder(
         itemCount: ref.watch(searchRouteVM).locate.length,
         itemBuilder: (context, index){
-          MocSearch locate = ref.read(searchRouteVM).locate[index];
-          return SearchLocationResult(street: locate.street!, city: locate.city!, country: locate.counter!, onPressed: () => ref.read(searchRouteVM).selectLocate(index, locate.street!),);
+          Feature locate = ref.read(searchRouteVM).locate[index];
+          return SearchLocationResult(street: locate.properties.name, city: locate.properties.description, onPressed: () => ref.read(searchRouteVM).selectLocate(index, locate.properties.name),);
         },
       ),
     );

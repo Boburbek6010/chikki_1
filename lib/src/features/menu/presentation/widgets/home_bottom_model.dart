@@ -1,3 +1,4 @@
+import 'package:demo1/src/core/routes/app_route_name.dart';
 import 'package:demo1/src/core/style/images.dart';
 import 'package:demo1/src/features/menu/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:l/l.dart';
 
 import '../../../../core/style/colors.dart';
+import '../../../order/presentation/screens/search_rout_screen.dart';
 
 class HomeModelBottomSheet extends ConsumerWidget {
   const HomeModelBottomSheet({Key? key}) : super(key: key);
@@ -72,7 +74,15 @@ class HomeModelBottomSheet extends ConsumerWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     color: AppColors.cE8E9EB),
-                child: Center(
+                child: MaterialButton(
+                  splashColor: AppColors.c6F767E,
+                  padding: EdgeInsets.zero,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)
+                  ),
+                  onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchRoutScreen(myLocate: ref.read(homeVM).nameOfCurrentLocation,)));
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
