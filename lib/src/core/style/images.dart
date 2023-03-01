@@ -48,6 +48,21 @@ class AppImages {
   );
 
 
+  static final cash = SvgPicture.asset(
+    'assets/icons/choose_car/cash.svg',
+    height: 24,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
+  static final settings = SvgPicture.asset(
+    'assets/icons/choose_car/settings.svg',
+    height: 24,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
+
 
   // !!!
   // !!!
@@ -67,6 +82,20 @@ class AppImages {
     fit: BoxFit.fitWidth,
   );
 
+  static final carChoose = Image.asset(
+    'assets/images/order/car_choose.png',
+    height: 27,
+    width: 57,
+    fit: BoxFit.cover,
+  );
+
+  static final map = Image.asset(
+    'assets/images/order/map.png',
+    height: 812,
+    width: 375,
+    fit: BoxFit.cover,
+  );
+
   static final homeModalBottomSheetCar = Image.asset(
     'assets/images/home/home_modal_bottom_sheet_car.png',
     height: 26,
@@ -78,27 +107,6 @@ class AppImages {
     'assets/images/home/home_chikki_food.png',
     height: 26,
     width: 26,
-    fit: BoxFit.cover,
-  );
-
-  static final homeCar1 = Image.asset(
-    'assets/images/home/car1.png',
-    height: 49,
-    width: 24,
-    fit: BoxFit.cover,
-  );
-
-  static final homeCar2 = Image.asset(
-    'assets/images/home/car2.png',
-    height: 49,
-    width: 24,
-    fit: BoxFit.cover,
-  );
-
-  static final homeCar3 = Image.asset(
-    'assets/images/home/car3.png',
-    height: 49,
-    width: 24,
     fit: BoxFit.cover,
   );
 

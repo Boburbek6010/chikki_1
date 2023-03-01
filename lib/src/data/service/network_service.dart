@@ -10,7 +10,6 @@ class NetworkService {
   // baseUrl
   static const isTester = true;
 
-
   static const DEVELOPMENT_SERVER = 'search-maps.yandex.ru';
   static const DEPLOYMENT_SERVER =  'search-maps.yandex.ru';//'admin-nefro.ssv.uz';
 

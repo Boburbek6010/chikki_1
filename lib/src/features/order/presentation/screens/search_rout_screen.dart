@@ -45,7 +45,7 @@ class SearchRoutScreen extends ConsumerWidget {
               myLocationController: ref.read(searchRouteVM).myLocationController,
               goLocationController: ref.read(searchRouteVM).goLocationController,
               onPressed: () {
-                Navigator.of(context).pop();
+                // Navigator.of(context).pop();
                 if(ref.read(searchRouteVM).goLocationController.text.trim() != ''){
                   l.d('gooo');
                   ref.read(searchRouteVM).getAllProperties();

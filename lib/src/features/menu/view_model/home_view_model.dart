@@ -29,10 +29,14 @@ class HomeVm extends ChangeNotifier {
   bool progress = false;
   late String nameOfCurrentLocation;
   late List<String> list;
+  List<Widget> body = [
+
+  ];
 
   HomeVm() {
     initState();
   }
+
 
   /// initializing when app started
   void initState() {
