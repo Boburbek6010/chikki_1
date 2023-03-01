@@ -49,7 +49,7 @@ dependencies:
   fluttertoast: ^8.1.1
 
   #bottomSheet
-  modal_bottom_sheet: ^2.1.2
+  draggable_home: ^1.0.4
 
   #http
   http: ^0.13.5
@@ -72,10 +72,12 @@ flutter:
     - assets/images/intro_page/
     - assets/images/login/
     - assets/images/home/
+    - assets/images/order/
     - assets/translations/
     - assets/icons/login/
     - assets/icons/order/
     - assets/icons/home/
+    - assets/icons/choose_car/
     - assets/lottle/
     - assets/images/order/
   #   - images/a_dot_ham.jpeg

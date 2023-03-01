@@ -1,8 +1,6 @@
 import 'package:demo1/src/features/menu/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:linear_timer/linear_timer.dart';
-import 'package:lottie/lottie.dart';
 import 'package:yandex_mapkit/yandex_mapkit.dart';
 import '../../../../core/global_keys.dart';
 import '../../../../core/style/colors.dart';
@@ -14,6 +12,10 @@ import '../widgets/home_bottom_model.dart';
 import '../widgets/home_cars_position.dart';
 import '../widgets/home_drawer_builder.dart';
 
+import '../widgets/home_choose_car/home_all_choose_car.dart';
+import '../widgets/home_choose_route/home_choose_route.dart';
+import '../widgets/home_main/home_main_bottom_sheet.dart';
+
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -21,6 +23,7 @@ class HomeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     ref.watch(homeVM);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         key: ref.read(homeVM).scaffoldKey,
       drawer: const Drawer(
         child: DividerW(),
@@ -47,24 +50,18 @@ class HomeScreen extends ConsumerWidget {
                   child: CircularProgressIndicator(),
                 )
               : const SizedBox.shrink(),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children:  [
-              HomeDrawerBuilder(
-                openDrawer: () {
-                   ref.read(homeVM).scaffoldKey.currentState?.openDrawer();
-                },
-                child: customGlobalKey.isManualMapChosen ? const Icon(Icons.arrow_back)  : AppImages.homeLeadingButton,
-              ),
-              const HomeModelBottomSheet(),
-            ],
-          ),
-           const HomeCarsPositions(),
-          ElevatedButton(onPressed: (){
-            arrivePassenger(context, () => ref.watch(homeVM).ratingAction(ref.watch(homeVM).ratingA), ref.watch(homeVM).ratingA);
-          },
-              child: const Text('dialog'))
+
+          /// home
+          // HomeMainBottomSheet(onTap: () {
+          //   Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchRoutScreen(myLocate: ref.read(homeVM).nameOfCurrentLocation,)));
+          // },),
+
+          /// route
+          // HomeChooseRouteSheet(onMainButtonPressed: () {  }),
+
+          /// choose car
+          const HomeChooseCar(),
+
         ],
       )
     );

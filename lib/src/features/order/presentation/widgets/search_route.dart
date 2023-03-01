@@ -80,7 +80,7 @@ class RouteField extends StatelessWidget {
                     const SizedBox(width: 9),
                     ElevatedButton(
                       onPressed: (){
-                        isManualMapChosen = true;
+
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.c2AC1BC,

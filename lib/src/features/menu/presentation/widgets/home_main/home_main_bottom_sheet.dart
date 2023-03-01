@@ -1,43 +1,21 @@
-import 'package:demo1/src/core/routes/app_route_name.dart';
-import 'package:demo1/src/core/style/images.dart';
-import 'package:demo1/src/features/menu/view_model/home_view_model.dart';
+import 'package:demo1/src/features/menu/presentation/widgets/home_drawer_builder.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:l/l.dart';
+import '../../../../../core/style/colors.dart';
+import '../../../../../core/style/images.dart';
 
-import '../../../../core/style/colors.dart';
-import '../../../order/presentation/screens/search_rout_screen.dart';
-
-class HomeModelBottomSheet extends ConsumerWidget {
-  const HomeModelBottomSheet({Key? key}) : super(key: key);
+class HomeMainBottomSheet extends StatelessWidget {
+  final VoidCallback onTap;
+  const HomeMainBottomSheet({Key? key, required this.onTap}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(homeVM);
+  Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-
-        /// Locator
-        Padding(
-          padding: const EdgeInsets.only(right: 15, bottom: 15),
-          child: MaterialButton(
-            splashColor: AppColors.white,
-            height: 54,
-            minWidth: 54,
-            padding: EdgeInsets.zero,
-            shape: const CircleBorder(),
-            color: AppColors.c2AC1BC,
-            onPressed: (){
-              ref.read(homeVM).findLocation();
-              l.w("locator");
-            },
-            child: AppImages.homeLocator,
-          ),
+        HomeDrawerBuilder(
+          child: AppImages.homeLeadingButton,
         ),
-
-
-        /// modal bottom sheet
         Container(
           height: 170,
           width: double.infinity,
@@ -78,11 +56,9 @@ class HomeModelBottomSheet extends ConsumerWidget {
                   splashColor: AppColors.c6F767E,
                   padding: EdgeInsets.zero,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)
+                      borderRadius: BorderRadius.circular(12)
                   ),
-                  onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchRoutScreen(myLocate: ref.read(homeVM).nameOfCurrentLocation,)));
-                  },
+                  onPressed: onTap,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -184,7 +160,6 @@ class HomeModelBottomSheet extends ConsumerWidget {
             ],
           ),
         ),
-
       ],
     );
   }

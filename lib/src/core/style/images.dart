@@ -55,6 +55,21 @@ class AppImages {
   );
 
 
+  static final cash = SvgPicture.asset(
+    'assets/icons/choose_car/cash.svg',
+    height: 24,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
+  static final settings = SvgPicture.asset(
+    'assets/icons/choose_car/settings.svg',
+    height: 24,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
+
 
   static final driverWithMessage = SvgPicture.asset(
     'assets/images/order/message.svg',
@@ -82,6 +97,20 @@ class AppImages {
   static final introImage3 = Image.asset(
     'assets/images/intro_page/taxi3.png',
     fit: BoxFit.fitWidth,
+  );
+
+  static final carChoose = Image.asset(
+    'assets/images/order/car_choose.png',
+    height: 27,
+    width: 57,
+    fit: BoxFit.cover,
+  );
+
+  static final map = Image.asset(
+    'assets/images/order/map.png',
+    height: 812,
+    width: 375,
+    fit: BoxFit.cover,
   );
 
   static final homeModalBottomSheetCar = Image.asset(

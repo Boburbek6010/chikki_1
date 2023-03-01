@@ -16,7 +16,6 @@ class SearchRoutVM extends ChangeNotifier {
   bool isLoading = false;
 
   void closePage(BuildContext context) {
-
     Navigator.pop(context);
   }
 
@@ -33,7 +32,7 @@ class SearchRoutVM extends ChangeNotifier {
     if(search.isEmpty){
       // locate = [];
     }else{
-      locate = searchLocateList.where((element) => element.properties.name.toString().toLowerCase().contains(search.toLowerCase())).toList();
+      locate = searchLocateList.where((element) => element.properties.name.toString().toLowerCase().startsWith(search.toLowerCase())).toList();
     }
     notifyListeners();
   }

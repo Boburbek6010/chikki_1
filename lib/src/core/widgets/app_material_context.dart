@@ -21,9 +21,7 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
       localizationsDelegates: context.localizationDelegates,
       debugShowCheckedModeBanner: false,
       title: 'Chikki',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(),
       initialRoute: AppRouteName.HOME,
       routes: AppRoutes.routes,
     );

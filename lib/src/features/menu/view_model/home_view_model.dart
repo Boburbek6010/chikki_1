@@ -29,6 +29,9 @@ class HomeVm extends ChangeNotifier {
   bool progress = false;
   late String nameOfCurrentLocation;
   late List<String> list;
+  List<Widget> body = [
+
+  ];
   bool isRouteChosen = true;
   double ratingA = 0.0;
   GlobalKey<ScaffoldState> scaffoldKey =  GlobalKey<ScaffoldState>();
@@ -46,6 +49,7 @@ class HomeVm extends ChangeNotifier {
   HomeVm() {
     initState();
   }
+
 
   /// initializing when app started
   void initState() {
