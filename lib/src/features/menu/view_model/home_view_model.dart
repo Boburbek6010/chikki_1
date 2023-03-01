@@ -30,11 +30,18 @@ class HomeVm extends ChangeNotifier {
   late String nameOfCurrentLocation;
   late List<String> list;
   bool isRouteChosen = true;
+  double ratingA = 0.0;
+  GlobalKey<ScaffoldState> scaffoldKey =  GlobalKey<ScaffoldState>();
 
   void canCelPage(BuildContext context){
     Navigator.pop(context);
   }
 
+
+  void ratingAction(double rating){
+    ratingA = rating;
+    notifyListeners();
+  }
 
   HomeVm() {
     initState();

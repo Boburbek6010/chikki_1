@@ -98,6 +98,43 @@ class AppImages {
     fit: BoxFit.cover,
   );
 
+  static final infoCar = Image.asset(
+    'assets/images/home/imfo_car.png',
+    height: 17,
+    width: 41,
+    fit: BoxFit.cover,
+  );
+
+  static final safetyCar = Image.asset(
+    'assets/images/home/sefty.png',
+    height: 25,
+    width: 25,
+    fit: BoxFit.cover,
+  );
+
+  static final layerCar = Image.asset(
+    'assets/images/home/icon_leyer.png',
+    height: 25,
+    width: 25,
+    fit: BoxFit.cover,
+  );
+
+  static final card = Image.asset(
+    'assets/icons/home/card.png',
+    height: 25,
+    width: 25,
+    fit: BoxFit.cover,
+  );
+
+  static final promocast = Image.asset(
+    'assets/icons/home/promocastlar.png',
+    height: 22,
+    width: 22,
+    fit: BoxFit.cover,
+  );
+
+
+
   static final homeChikkiFood = Image.asset(
     'assets/images/home/home_chikki_food.png',
     height: 26,

@@ -148,13 +148,6 @@ void comeCar(BuildContext context, OnPressed? cancel){
                 ],
               ),
             ),
-
-
-
-
-
-
-
           ],
         ),
       )

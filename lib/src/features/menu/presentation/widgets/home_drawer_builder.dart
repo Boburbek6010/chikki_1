@@ -1,4 +1,5 @@
 import 'package:demo1/src/core/global_keys.dart';
+import 'package:demo1/src/features/welcome/presentation/widgets/intro_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/style/colors.dart';
@@ -6,7 +7,8 @@ import '../../../../core/style/images.dart';
 
 class HomeDrawerBuilder extends StatelessWidget {
   final Widget child;
-  const HomeDrawerBuilder({required this.child, Key? key}) : super(key: key);
+  final OnPressedCallBack openDrawer;
+  const HomeDrawerBuilder({required this.child, required this.openDrawer, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class HomeDrawerBuilder extends StatelessWidget {
       child: MaterialButton(
         shape: const CircleBorder(),
         splashColor: AppColors.c2AC1BC,
-        onPressed: () {},
+        onPressed: openDrawer,
         child: child,
       ),
     );
