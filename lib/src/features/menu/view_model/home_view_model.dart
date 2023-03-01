@@ -21,6 +21,10 @@ class HomeVm extends ChangeNotifier {
   bool progress = false;
   bool isRouteChosen = true;
 
+  void canCelPage(BuildContext context){
+    Navigator.pop(context);
+  }
+
 
   HomeVm() {
     initState();

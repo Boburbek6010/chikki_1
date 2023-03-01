@@ -71,6 +71,7 @@ flutter:
     - assets/icons/order/
     - assets/icons/home/
     - assets/lottle/
+    - assets/images/order/
   #   - images/a_dot_ham.jpeg
 
   # fonts:
