@@ -32,6 +32,19 @@ class HomeVm extends ChangeNotifier {
   List<Widget> body = [
 
   ];
+  bool isRouteChosen = true;
+  double ratingA = 0.0;
+  GlobalKey<ScaffoldState> scaffoldKey =  GlobalKey<ScaffoldState>();
+
+  void canCelPage(BuildContext context){
+    Navigator.pop(context);
+  }
+
+
+  void ratingAction(double rating){
+    ratingA = rating;
+    notifyListeners();
+  }
 
   HomeVm() {
     initState();

@@ -2,7 +2,6 @@ import 'package:demo1/src/features/menu/presentation/widgets/home_drawer_builder
 import 'package:demo1/src/features/menu/presentation/widgets/home_main_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../core/style/colors.dart';
 
 
@@ -16,8 +15,9 @@ class HomeChooseRouteSheet extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const HomeDrawerBuilder(
-          child: Icon(Icons.arrow_back, size: 23,),
+         HomeDrawerBuilder(
+          openDrawer: () {  },
+          child: const Icon(Icons.arrow_back, size: 23,),
         ),
         Container(
           height: 166,

@@ -16,6 +16,9 @@
   "openGallery": "Fayl orqali yukalsh",
   "yourRout": "Sizning mashrutingiz",
   "arrivalAddress": "Yetib borish manzili",
-  "buttonCart": "Karta"
+  "buttonCart": "Karta",
+  "chooseCare": "Bir qancha mashinalar bor. Sizga\nqaysi biri mos kelishini qarayabmiz",
+  "findCar": "Mashina qidirilmoqda",
+  "cancel": "Buyurtmani\nbekor qilish"
 
 }

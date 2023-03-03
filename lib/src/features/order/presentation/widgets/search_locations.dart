@@ -1,4 +1,5 @@
 
+import 'package:demo1/src/core/style/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,13 +20,13 @@ class SearchLocationResult extends StatelessWidget {
       children: [
         ListTile(
           onTap: onPressed,
-          leading: const Padding(
-            padding:  EdgeInsets.all(8.0),
-            child:  Icon(Icons.radio_button_off, weight: 4, color: AppColors.c9DA4B1, size: 20,),
+          leading:  Padding(
+            padding:  const EdgeInsets.all(8.0),
+            child:  AppImages.circleIndicator,
           ),
           title: Text(street, style: Theme.of(context).textTheme.titleSmall),
           subtitle: Text(city,  style: Theme.of(context).textTheme.labelSmall?.copyWith(color: AppColors.c9DA4B1, fontSize: FontSize.size12)),
-          trailing: const Icon(CupertinoIcons.location_solid),
+          trailing:  AppImages.locationIcon,
           minVerticalPadding: 10,
           isThreeLine: false,
         ),

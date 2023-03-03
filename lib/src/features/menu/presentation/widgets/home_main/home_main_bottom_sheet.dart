@@ -14,6 +14,7 @@ class HomeMainBottomSheet extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         HomeDrawerBuilder(
+          openDrawer: () {  },
           child: AppImages.homeLeadingButton,
         ),
         Container(
