@@ -35,7 +35,7 @@ class HomeChooseCar extends StatelessWidget {
                     child: Column(
                       children: [
                         SingleChildScrollView(
-                          controller: scrollController,
+                          // controller: scrollController,
                           physics: const NeverScrollableScrollPhysics(),
                           child: Container(
                             margin: const EdgeInsets.only(top: 10, bottom: 20),
@@ -78,7 +78,7 @@ class HomeChooseCar extends StatelessWidget {
                         Expanded(
                           child: ListView.builder(
                             padding: EdgeInsets.zero,
-                            // controller: scrollController,
+                            controller: scrollController,
                             itemCount: 25,
                             itemBuilder: (BuildContext context, int index) {
                               return Column(
@@ -89,6 +89,7 @@ class HomeChooseCar extends StatelessWidget {
                             },
                           ),
                         ),
+
                       ],
                     ),
                   );
@@ -148,6 +149,9 @@ class HomeChooseCar extends StatelessWidget {
                 ],
               ),
             ),
+            Container(
+              alignment: Alignment(0.85, -1),
+                child: const CustomLocator()),
           ],
         ),
       ],

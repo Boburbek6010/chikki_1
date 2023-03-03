@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yandex_mapkit/yandex_mapkit.dart';
 
+import '../../../order/presentation/screens/search_rout_screen.dart';
 import '../widgets/home_choose_car/home_all_choose_car.dart';
 import '../widgets/home_choose_route/home_choose_route.dart';
 import '../widgets/home_main/home_main_bottom_sheet.dart';
@@ -38,15 +39,15 @@ class HomeScreen extends ConsumerWidget {
               : const SizedBox.shrink(),
 
           /// home
-          // HomeMainBottomSheet(onTap: () {
-          //   Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchRoutScreen(myLocate: ref.read(homeVM).nameOfCurrentLocation,)));
-          // },),
+          HomeMainBottomSheet(onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchRoutScreen(myLocate: ref.read(homeVM).nameOfCurrentLocation,)));
+          },),
 
           /// route
           // HomeChooseRouteSheet(onMainButtonPressed: () {  }),
 
           /// choose car
-          const HomeChooseCar(),
+          // const HomeChooseCar(),
 
         ],
       )
