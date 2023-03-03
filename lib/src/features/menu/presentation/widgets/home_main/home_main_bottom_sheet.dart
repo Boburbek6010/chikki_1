@@ -5,7 +5,8 @@ import '../../../../../core/style/images.dart';
 
 class HomeMainBottomSheet extends StatelessWidget {
   final VoidCallback onTap;
-  const HomeMainBottomSheet({Key? key, required this.onTap}) : super(key: key);
+  final VoidCallback onDrawerBuilderPressed;
+  const HomeMainBottomSheet({required this.onDrawerBuilderPressed, Key? key, required this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class HomeMainBottomSheet extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         HomeDrawerBuilder(
-          openDrawer: () {  },
+          openDrawer: onDrawerBuilderPressed,
           child: AppImages.homeLeadingButton,
         ),
         Container(

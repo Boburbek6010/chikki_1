@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearch extends StatelessWidget {
-  const CustomSearch({Key? key}) : super(key: key);
+  final VoidCallback onBackPressed;
+  const CustomSearch({Key? key, required this.onBackPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +18,21 @@ class CustomSearch extends StatelessWidget {
           Container(
             height: 48,
             width: 48,
-            padding: const EdgeInsets.only(left: 6),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: AppColors.white,
             ),
-            child: const Icon(
-              Icons.arrow_back_ios,
-              color: AppColors.c9DA4B1,
-              size: 20,
+            child: MaterialButton(
+              padding: const EdgeInsets.only(left: 6),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              onPressed: onBackPressed,
+              child: const Icon(
+                Icons.arrow_back_ios,
+                color: AppColors.c9DA4B1,
+                size: 20,
+              ),
             ),
           ),
           const SizedBox(width: 15,),

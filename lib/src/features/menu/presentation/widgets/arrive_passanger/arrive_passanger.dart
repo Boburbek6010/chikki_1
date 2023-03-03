@@ -1,18 +1,17 @@
+import 'package:demo1/src/features/menu/view_model/home_view_model.dart';
 import 'package:demo1/src/features/welcome/presentation/widgets/intro_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
 import '../../../../../core/style/colors.dart';
 import '../../../../../core/style/images.dart';
 
-
-
-class ArrivePassenger extends StatelessWidget {
-  final OnPressedCallBack ratingAction;
-  final double rating;
-  const ArrivePassenger({Key? key, required this.rating, required this.ratingAction}) : super(key: key);
+class ArrivePassenger extends ConsumerWidget {
+  final VoidCallback ratingAction;
+  ArrivePassenger({Key? key, required this.ratingAction}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       color: AppColors.white,
       child: Column(
@@ -123,7 +122,7 @@ class ArrivePassenger extends StatelessWidget {
                     child: AppImages.safetyCar,
                   ),
                   const SizedBox(height: 8),
-                  Text('Hovsizlik', style: Theme.of(context).textTheme.titleSmall?.copyWith(color: AppColors.c929292))
+                  Text('Havfsizlik', style: Theme.of(context).textTheme.titleSmall?.copyWith(color: AppColors.c929292))
                 ],
               ),
 
@@ -154,7 +153,7 @@ class ArrivePassenger extends StatelessWidget {
 
           Center(
             child: SmoothStarRating(
-              rating: rating,
+              rating: ref.read(homeVM).ratingA,
               size: 50,
               filledIconData: Icons.star,
               halfFilledIconData: Icons.star_half,
@@ -164,9 +163,9 @@ class ArrivePassenger extends StatelessWidget {
               color: AppColors.c2AC1BC,
               borderColor: AppColors.c2AC1BC,
               spacing: 2.0,
-              onRatingChanged: (value){
-               // rating = value;
-                ratingAction;
+              onRatingChanged: (value) {
+                ref.read(homeVM).ratingA = value;
+               ratingAction();
               },
             ),
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
 
 import '../../../../../core/style/colors.dart';
 import '../../../../../core/style/images.dart';
@@ -8,7 +9,8 @@ typedef OnPressed = void Function();
 
 class CameCarProcess extends StatelessWidget {
   final OnPressed cancel;
-  const CameCarProcess({Key? key, required this.cancel}) : super(key: key);
+  final OnPressed onEndTime;
+  const CameCarProcess({Key? key, required this.onEndTime, required this.cancel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,11 +43,30 @@ class CameCarProcess extends StatelessWidget {
                         color: AppColors.black,
                       ),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
+                          const SizedBox(width: 7,),
                           AppImages.cloc,
-                          const SizedBox(width: 5),
-                          Text('1:20', style: Theme.of(context).textTheme.labelLarge?.copyWith(color: AppColors.white),),
+                          TimerCountdown(
+                            onEnd: onEndTime,
+                            enableDescriptions: false,
+                            format: CountDownTimerFormat.minutesSeconds,
+                            spacerWidth: 1,
+                            timeTextStyle: const TextStyle(
+                              color: AppColors.white,
+                            ),
+                            colonsTextStyle: const TextStyle(
+                              letterSpacing: -3,
+                              color: AppColors.white,
+                            ),
+                              endTime: DateTime.now().add(
+                                const Duration(
+                                  minutes: 0,
+                                  seconds: 9,
+                                ),
+                              ),
+                          ),
+                          const SizedBox(width: 7,),
                         ],
                       ),
                     ),

@@ -4,7 +4,8 @@ import '../../../../core/style/colors.dart';
 import '../../../../core/style/images.dart';
 
 class CustomLocator extends StatelessWidget {
-  const CustomLocator({Key? key}) : super(key: key);
+  final VoidCallback onTap;
+  const CustomLocator({required this.onTap, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +18,7 @@ class CustomLocator extends StatelessWidget {
         padding: EdgeInsets.zero,
         shape: const CircleBorder(),
         color: AppColors.c2AC1BC,
-        onPressed: (){
-          // ref.read(homeVM).findLocation();
-          // l.w("locator");
-        },
+        onPressed: onTap,
         child: AppImages.homeLocator,
       ),
     );
