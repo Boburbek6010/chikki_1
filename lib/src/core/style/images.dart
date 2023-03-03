@@ -16,6 +16,13 @@ class AppImages {
     fit: BoxFit.cover,
   );
 
+  static final locationIcon = SvgPicture.asset(
+    'assets/icons/order/location.svg',
+    height: 24,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
   static final homeLocator = SvgPicture.asset(
     'assets/icons/home/home_locator.svg',
     height: 22,
@@ -161,6 +168,14 @@ class AppImages {
     width: 22,
     fit: BoxFit.cover,
   );
+
+  static final circleIndicator = Image.asset(
+    'assets/icons/order/circle.png',
+    height: 14,
+    width: 14,
+    fit: BoxFit.cover,
+  );
+
 
 
 

@@ -22,6 +22,7 @@ class SearchRoutScreen extends ConsumerWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        elevation: 0,
         centerTitle: true,
         backgroundColor: AppColors.white,
         leading: IconButton(
