@@ -1,5 +1,4 @@
 import 'package:demo1/src/features/menu/view_model/home_view_model.dart';
-import 'package:demo1/src/features/welcome/presentation/widgets/intro_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
@@ -8,7 +7,7 @@ import '../../../../../core/style/images.dart';
 
 class ArrivePassenger extends ConsumerWidget {
   final VoidCallback ratingAction;
-  ArrivePassenger({Key? key, required this.ratingAction}) : super(key: key);
+  const ArrivePassenger({Key? key, required this.ratingAction}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
