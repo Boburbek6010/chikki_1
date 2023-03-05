@@ -1,12 +1,11 @@
-import 'package:demo1/src/features/order/presentation/screens/search_rout_screen.dart';
-import 'package:demo1/src/features/order/view_model/search_route.dart';
+import '../../features/taxi/order/presentation/screens/search_rout_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/login/presentation/screens/register_screen.dart';
-import '../../features/login/presentation/screens/set_profile_screen.dart';
-import '../../features/menu/presentation/screens/home_screen.dart';
-import '../../features/welcome/presentation/screens/intro_screen.dart';
-import '../../features/welcome/presentation/screens/welcome_screen.dart';
+import '../../features/taxi/login/presentation/screens/register_screen.dart';
+import '../../features/taxi/login/presentation/screens/set_profile_screen.dart';
+import '../../features/taxi/menu/presentation/screens/home_screen.dart';
+import '../../features/taxi/welcome/presentation/screens/intro_screen.dart';
+import '../../features/taxi/welcome/presentation/screens/welcome_screen.dart';
 import 'app_route_name.dart';
 
 @immutable
