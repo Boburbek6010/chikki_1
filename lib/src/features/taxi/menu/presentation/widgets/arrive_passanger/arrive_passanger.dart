@@ -8,7 +8,7 @@ import '../../../../../../core/style/images.dart';
 
 class ArrivePassenger extends ConsumerWidget {
   final VoidCallback ratingAction;
-  ArrivePassenger({Key? key, required this.ratingAction}) : super(key: key);
+  const ArrivePassenger({Key? key, required this.ratingAction}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
