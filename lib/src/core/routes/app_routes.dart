@@ -15,7 +15,7 @@ class AppRoutes{
   static final Map<String, Widget Function(BuildContext)>routes = {
     AppRouteName.WELCOME: (context) => const WelcomeScreen(),
     AppRouteName.INTRO: (context) => const IntroScreen(),
-    AppRouteName.HOME: (context) => const HomeScreen(),
+    AppRouteName.HOME: (context) => HomeScreen(),
     AppRouteName.SETPROFILE: (context) => const SetProfileScreen(),
     AppRouteName.REGISTER: (context) => const RegisterScreen(),
     AppRouteName.SEARCHROUTE: (context) =>   const SearchRoutScreen(),

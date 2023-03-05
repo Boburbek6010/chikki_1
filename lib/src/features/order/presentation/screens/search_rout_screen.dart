@@ -1,6 +1,7 @@
 import 'package:demo1/src/core/global_keys.dart';
 import 'package:demo1/src/data/entity/yandex_routes.dart';
 import 'package:demo1/src/features/order/view_model/search_route.dart';
+import 'package:demo1/src/features/settings/checker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,6 +19,7 @@ class SearchRoutScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref.watch(searchRouteVM);
+    ref.watch(checker);
     ref.read(searchRouteVM).myLocationController.text = myLocate ?? 'error';
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -28,8 +30,8 @@ class SearchRoutScreen extends ConsumerWidget {
         leading: IconButton(
           splashRadius: 25,
           onPressed: () {
-            isManualMapChosen = false;
-            ref.read(searchRouteVM).closePage(context);
+            ref.read(checker).sBackFromSearchToHomeFalse();
+            Navigator.of(context).pop();
           },
           icon: const Icon(Icons.arrow_back_ios, color: AppColors.c9DA4B1, size: 22,),
         ),
@@ -43,6 +45,7 @@ class SearchRoutScreen extends ConsumerWidget {
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(130),
           child: RouteField(
+            text: ref.read(searchRouteVM).goLocationController.text,
               myLocationController: ref.read(searchRouteVM).myLocationController,
               goLocationController: ref.read(searchRouteVM).goLocationController,
               onPressed: () {
@@ -52,7 +55,13 @@ class SearchRoutScreen extends ConsumerWidget {
                   ref.read(searchRouteVM).getAllProperties();
                 }
                 ref.watch(searchRouteVM).searchLocate(ref.watch(searchRouteVM).goLocationController.text);
-              }),
+              },
+              onCardPressed: () {
+                var a = ref.read(searchRouteVM).goLocationController.text;
+                ref.read(checker).sBackFromSearchToHome();
+                Navigator.of(context).pop(a);
+                l.w(a);
+          },),
         ),
       ),
       body: ListView.builder(

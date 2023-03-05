@@ -8,7 +8,9 @@ import '../home_main_button.dart';
 import 'car_card.dart';
 
 class HomeChooseCar extends StatelessWidget {
-  const HomeChooseCar({Key? key}) : super(key: key);
+  final VoidCallback onBackPressed;
+  final VoidCallback onMainPressed;
+  const HomeChooseCar({Key? key, required this.onBackPressed, required this.onMainPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,9 @@ class HomeChooseCar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const CustomSearch(),
+        CustomSearch(
+          onBackPressed: onBackPressed,
+        ),
         Stack(
           alignment: Alignment.bottomCenter,
           children: [
@@ -89,6 +93,7 @@ class HomeChooseCar extends StatelessWidget {
                             },
                           ),
                         ),
+
                       ],
                     ),
                   );
@@ -142,7 +147,7 @@ class HomeChooseCar extends StatelessWidget {
                   ),
                   HomeMainButton(
                     name: 'Mashina tanlash',
-                    onTap: (){},
+                    onTap: onMainPressed,
                   ),
                   const SizedBox(height: 10,),
                 ],

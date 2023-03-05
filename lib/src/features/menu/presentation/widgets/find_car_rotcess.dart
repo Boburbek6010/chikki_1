@@ -7,15 +7,13 @@ import 'package:lottie/lottie.dart';
 import '../../../../core/style/colors.dart';
 import '../../../../core/style/images.dart';
 
-findCarDialog(
-    {required BuildContext context}){
+findCarDialog({required BuildContext context, required VoidCallback onCancel, required VoidCallback onTimeEnd}){
   return showGeneralDialog(
     context: context,
     pageBuilder: (context, animation, secondaryAnimation) => Scaffold(
         backgroundColor: Colors.grey.withOpacity(.1),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox.shrink(),
             Stack(
@@ -77,14 +75,12 @@ findCarDialog(
                   Column(
                     children: [
                       LinearTimer(
-                        duration: const Duration(seconds: 14),
+                        duration: const Duration(seconds: 6),
                         minHeight: 6,
                         color: AppColors.c2AC1BC,
                         backgroundColor: AppColors.transparent,
                         forward: false,
-                        onTimerEnd: () {
-                          print("timer ended");
-                        },
+                        onTimerEnd: onTimeEnd,
                       ),
                       Transform.translate(
                         offset: const Offset(0, -8),
@@ -96,9 +92,7 @@ findCarDialog(
                   ),
 
                   ElevatedButton(
-                      onPressed: (){
-                        Navigator.pop(context);
-                      },
+                      onPressed: onCancel,
                       style: ElevatedButton.styleFrom(
                         elevation: 0,
                         shape: const CircleBorder(),

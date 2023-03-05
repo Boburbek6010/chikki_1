@@ -15,13 +15,9 @@ class SearchRoutVM extends ChangeNotifier {
   List<Feature> searchLocateList = [];
   bool isLoading = false;
 
-  void closePage(BuildContext context) {
-    Navigator.pop(context);
-  }
-
 
   Future<void> getAllProperties() async {
-    final response = await AppRepositoryImpl().getAllRoutes(goLocationController.text.trim().toString(), 'uz');
+    final response = await AppRepositoryImpl().getAllRoutes(goLocationController.text.toString(), 'uz');
     locate = response;
     l.w(locate.first.properties.name);
     notifyListeners();

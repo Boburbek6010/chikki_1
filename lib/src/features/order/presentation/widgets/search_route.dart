@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:l/l.dart';
 import '../../../../core/global_keys.dart';
 import '../../../../core/style/colors.dart';
 import '../../../../core/style/images.dart';
@@ -11,7 +12,9 @@ class RouteField extends StatelessWidget {
   final TextEditingController myLocationController;
   final TextEditingController goLocationController;
   final VoidCallback onPressed;
-  const RouteField({Key? key, required this.myLocationController, required this.goLocationController, required this.onPressed,}) : super(key: key);
+  final VoidCallback onCardPressed;
+  late String? text;
+  RouteField({Key? key, required this.text, required this.onCardPressed, required this.myLocationController, required this.goLocationController, required this.onPressed,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -79,9 +82,7 @@ class RouteField extends StatelessWidget {
                     ),
                     const SizedBox(width: 9),
                     ElevatedButton(
-                      onPressed: (){
-
-                      },
+                      onPressed: onCardPressed,
                       style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.c2AC1BC,
                           shape: RoundedRectangleBorder(
@@ -98,6 +99,8 @@ class RouteField extends StatelessWidget {
                 hintText: 'arrivalAddress'.tr()
             ),
             onChanged: (v) {
+              l.w(text!);
+              text = goLocationController.text.toString() ?? '';
               onPressed();
             },
           ),
