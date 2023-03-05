@@ -5,4 +5,5 @@ static const SETPROFILE = 'set_profile';
 static const REGISTER = 'register';
 static const WELCOME = 'initial';
 static const SEARCHROUTE = '/searchRoute';
+static const RESULT = '/result_screen';
 }

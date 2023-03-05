@@ -1,3 +1,4 @@
+import 'package:demo1/src/core/routes/app_route_name.dart';
 import 'package:demo1/src/features/taxi/menu/presentation/widgets/home_drawer_builder.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../core/style/colors.dart';
@@ -100,26 +101,36 @@ class HomeMainBottomSheet extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: AppColors.cE8E9EB),
-                      child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            AppImages.homeModalBottomSheetCar,
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            const Text(
-                              "Yo’l-yo’lakay",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
+                      child: MaterialButton(
+                        splashColor: AppColors.c6F767E,
+                        padding: EdgeInsets.zero,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)
+                        ),
+                        onPressed: (){
+                          Navigator.of(context).pushNamed(AppRouteName.RESULT);
+                        },
+                        child: Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const SizedBox(
+                                width: 12,
                               ),
-                            )
-                          ],
+                              AppImages.homeModalBottomSheetCar,
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Yo’l-yo’lakay",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -133,26 +144,36 @@ class HomeMainBottomSheet extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: AppColors.cE8E9EB),
-                      child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            AppImages.homeChikkiFood,
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            const Text(
-                              "Chikki food",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
+                      child: MaterialButton(
+                        splashColor: AppColors.c6F767E,
+                        padding: EdgeInsets.zero,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)
+                        ),
+                        onPressed: (){
+                          Navigator.of(context).pushNamed(AppRouteName.RESULT);
+                        },
+                        child: Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const SizedBox(
+                                width: 12,
                               ),
-                            )
-                          ],
+                              AppImages.homeChikkiFood,
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text(
+                                "Chikki food",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),

@@ -37,6 +37,13 @@ class AppImages {
     fit: BoxFit.cover,
   );
 
+  static final resultArrow = SvgPicture.asset(
+    'assets/icons/yol_yolakay/result_arrow.svg',
+    height: 10,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
   // static final homeCenterLocator = SvgPicture.asset(
   //   'assets/images/home/live_location.png',
   //   height: 48,
@@ -258,6 +265,36 @@ class AppImages {
     height: 25,
     width: 25,
   );
+
+  static final profile = Image.asset(
+    'assets/images/yol-yolakay/profile.png',
+    height: 46,
+    width: 46,
+    fit: BoxFit.cover,
+  );
+
+  static final where = Image.asset(
+    'assets/images/yol-yolakay/where.png',
+    height: 75,
+    width: 25,
+    fit: BoxFit.cover,
+  );
+
+  static final schedule = Image.asset(
+    'assets/images/yol-yolakay/schedule.png',
+    height: 18,
+    width: 18,
+    fit: BoxFit.cover,
+  );
+
+  static final time = Image.asset(
+    'assets/images/yol-yolakay/time.png',
+    height: 20,
+    width: 20,
+    fit: BoxFit.cover,
+  );
+
+
 }
 
 // extension CustomSvg on SvgPicture {
