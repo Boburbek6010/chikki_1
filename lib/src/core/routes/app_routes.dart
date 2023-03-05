@@ -1,3 +1,4 @@
+import '../../features/food/home/presentation/screens/food_catigories_screen.dart';
 import '../../features/taxi/order/presentation/screens/search_rout_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,5 +19,7 @@ class AppRoutes{
     AppRouteName.SETPROFILE: (context) => const SetProfileScreen(),
     AppRouteName.REGISTER: (context) => const RegisterScreen(),
     AppRouteName.SEARCHROUTE: (context) =>   const SearchRoutScreen(),
+    ///food
+    AppRouteName.FOODHOME: (context) =>   const FoodCategory(),
   };
 }

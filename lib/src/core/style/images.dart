@@ -86,6 +86,22 @@ class AppImages {
   );
 
 
+  /// Chikki Food
+
+  static final homeSearch = SvgPicture.asset(
+    'assets/images/food/food_home/search-normal.svg',
+    height: 22,
+    width: 22,
+    // fit: BoxFit.cover,
+  );
+
+
+
+
+
+
+
+
 
 
   // !!!
@@ -93,6 +109,34 @@ class AppImages {
   // !!! images
 
   ///  Png
+
+
+
+  /// Chikki Food
+
+  static final foodAppBar = Image.asset(
+    'assets/images/food/food_home/appbar_image.png',
+    height: 250,
+    width: double.infinity,
+    fit: BoxFit.cover,
+  );
+
+
+  static final price = Image.asset(
+    'assets/images/food/food_home/price.png',
+    height: 125,
+    width: double.infinity,
+    fit: BoxFit.cover,
+  );
+
+  static final categoryFood = Image.asset(
+    'assets/images/food/food_home/category.png',
+    height: 125,
+    width: double.infinity,
+    fit: BoxFit.cover,
+  );
+
+  /// taxi
 
   static final welcomeImage = Image.asset(
     'assets/images/intro_page/welcome.png',

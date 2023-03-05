@@ -82,6 +82,8 @@ flutter:
     - assets/icons/choose_car/
     - assets/lottle/
     - assets/images/order/
+    #food
+    - assets/images/food/food_home/
   #   - images/a_dot_ham.jpeg
 
   # fonts:
