@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../core/style/colors.dart';
 import '../../../../../core/style/images.dart';
 
@@ -65,7 +64,6 @@ class CameCarProcess extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 const Divider(thickness: 1),
-
                 //#carInfo
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
