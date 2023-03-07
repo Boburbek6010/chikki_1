@@ -76,10 +76,12 @@ flutter:
     - assets/images/login/
     - assets/images/home/
     - assets/images/order/
+    - assets/images/yol-yolakay/
     - assets/translations/
     - assets/icons/login/
     - assets/icons/order/
     - assets/icons/home/
+    - assets/icons/yol_yolakay/
     - assets/icons/choose_car/
     - assets/lottle/
     - assets/images/order/
