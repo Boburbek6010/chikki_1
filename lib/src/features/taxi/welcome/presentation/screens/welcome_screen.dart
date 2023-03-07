@@ -1,10 +1,7 @@
 import 'package:demo1/src/core/style/images.dart';
 import 'package:demo1/src/features/taxi/welcome/presentation/screens/intro_screen.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../../../core/style/colors.dart';
 import '../../../settings/make_less.dart';
 
 class WelcomeScreen extends ConsumerWidget {
@@ -19,7 +16,16 @@ class WelcomeScreen extends ConsumerWidget {
         });
       },
       child: Scaffold(
-        body: Stack(
+        body: Center(
+          child: AppImages.appLogo,
+        ),
+      ),
+    );
+  }
+}
+
+/*
+Stack(
           alignment: Alignment.bottomLeft,
           children: [
             SizedBox(
@@ -65,8 +71,5 @@ class WelcomeScreen extends ConsumerWidget {
             ),
             // Text(data),
           ],
-        ),
-      ),
-    );
-  }
-}
+        )
+* */

@@ -2,8 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'colors.dart';
-
 class AppImages {
   const AppImages._();
 
@@ -137,6 +135,14 @@ class AppImages {
   );
 
   /// taxi
+
+
+  static final appLogo = Image.asset(
+    'assets/images/intro_page/chikki_logo.png',
+    height: 150,
+    width: 150,
+    fit: BoxFit.cover,
+  );
 
   static final welcomeImage = Image.asset(
     'assets/images/intro_page/welcome.png',

@@ -3,7 +3,10 @@ import 'package:demo1/src/core/style/images.dart';
 import 'package:flutter/material.dart';
 
 class CarCard extends StatelessWidget {
-  const CarCard({Key? key}) : super(key: key);
+  final String carName;
+  final int minute;
+  final int price;
+  const CarCard({Key? key, required this.carName, required this.minute, required this.price}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +23,11 @@ class CarCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('Chikki', style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  Text(carName, style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                   ),),
-                  Text(' 1 min', style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  Text(minute.toString(), style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.w400,
                     color: AppColors.c9DA4B1
@@ -32,7 +35,7 @@ class CarCard extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              Text('3000 so\'m', style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              Text('$price so\'m', style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.w700,
               ),),

@@ -1,7 +1,7 @@
 import 'package:demo1/src/core/style/colors.dart';
 import 'package:demo1/src/core/style/images.dart';
-import 'package:demo1/src/features/taxi/menu/presentation/widgets/custom_locator.dart';
 import 'package:demo1/src/features/taxi/menu/presentation/widgets/home_choose_car/search.dart';
+import 'package:demo1/src/features/taxi/menu/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 
 import '../home_main_button.dart';
@@ -83,11 +83,13 @@ class HomeChooseCar extends StatelessWidget {
                           child: ListView.builder(
                             padding: EdgeInsets.zero,
                             // controller: scrollController,
-                            itemCount: 25,
+                            itemCount: 5,
                             itemBuilder: (BuildContext context, int index) {
+                              List list = ['Chikki', 'Standard', 'Ekanom', 'Kamfort', 'Biznes'];
+
                               return Column(
-                                children: const [
-                                  CarCard(),
+                                children:  [
+                                  CarCard(carName: list[index], minute: index + 1, price: (index + 1) * 10000,),
                                 ],
                               );
                             },
