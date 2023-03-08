@@ -1,4 +1,4 @@
-import 'package:demo1/src/core/style/colors.dart';
+import 'package:Chikki/src/core/style/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

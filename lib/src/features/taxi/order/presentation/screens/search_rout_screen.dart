@@ -1,6 +1,6 @@
-import 'package:demo1/src/data/entity/yandex_routes.dart';
-import 'package:demo1/src/features/taxi/order/view_model/search_route.dart';
-import 'package:demo1/src/features/taxi/settings/checker.dart';
+import 'package:Chikki/src/data/entity/yandex_routes.dart';
+import 'package:Chikki/src/features/taxi/order/view_model/search_route.dart';
+import 'package:Chikki/src/features/taxi/settings/checker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

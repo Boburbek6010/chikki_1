@@ -1,5 +1,5 @@
-import 'package:demo1/src/core/style/colors.dart';
-import 'package:demo1/src/core/style/images.dart';
+import 'package:Chikki/src/core/style/colors.dart';
+import 'package:Chikki/src/core/style/images.dart';
 import 'package:flutter/material.dart';
 
 Future<void> showAlertDialog(BuildContext context) async {

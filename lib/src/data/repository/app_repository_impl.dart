@@ -1,6 +1,6 @@
-import 'package:demo1/src/data/entity/yandex_routes.dart';
-import 'package:demo1/src/data/repository/app_repository.dart';
-import 'package:demo1/src/data/service/network_service.dart';
+import 'package:Chikki/src/data/entity/yandex_routes.dart';
+import 'package:Chikki/src/data/repository/app_repository.dart';
+import 'package:Chikki/src/data/service/network_service.dart';
 
 class AppRepositoryImpl implements AppRepository{
   @override

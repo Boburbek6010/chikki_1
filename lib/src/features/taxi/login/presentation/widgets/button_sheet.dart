@@ -1,6 +1,6 @@
-import 'package:demo1/src/core/style/colors.dart';
-import 'package:demo1/src/core/style/images.dart';
-import 'package:demo1/src/features/taxi/login/presentation/widgets/continue_button.dart';
+import 'package:Chikki/src/core/style/colors.dart';
+import 'package:Chikki/src/core/style/images.dart';
+import 'package:Chikki/src/features/taxi/login/presentation/widgets/continue_button.dart';
 import 'package:flutter/material.dart';
 
 typedef OnPressedUpload = void Function();

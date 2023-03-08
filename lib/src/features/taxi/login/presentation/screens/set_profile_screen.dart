@@ -1,6 +1,6 @@
-import 'package:demo1/src/core/style/colors.dart';
-import 'package:demo1/src/core/style/images.dart';
-import 'package:demo1/src/features/taxi/login/view_model/register_vm.dart';
+import 'package:Chikki/src/core/style/colors.dart';
+import 'package:Chikki/src/core/style/images.dart';
+import 'package:Chikki/src/features/taxi/login/view_model/register_vm.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

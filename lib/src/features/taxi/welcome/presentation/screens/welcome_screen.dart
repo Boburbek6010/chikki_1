@@ -1,5 +1,5 @@
-import 'package:demo1/src/core/style/images.dart';
-import 'package:demo1/src/features/taxi/welcome/presentation/screens/intro_screen.dart';
+import 'package:Chikki/src/core/style/images.dart';
+import 'package:Chikki/src/features/taxi/welcome/presentation/screens/intro_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../settings/make_less.dart';
