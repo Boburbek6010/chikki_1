@@ -6,8 +6,7 @@ static const REGISTER = '/register';
 static const WELCOME = '/initial';
 static const SEARCHROUTE = '/searchRoute';
 static const YHOME = '/y_home_screen';
-
-
-/// food
+static const FWELCOME = '/f_food_welcome_screen';
+static const YWELCOME = '/y_welcome_screen';
 static const FOODHOME = '/food_home';
 }

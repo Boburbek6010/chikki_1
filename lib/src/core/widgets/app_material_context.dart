@@ -22,7 +22,7 @@ class _AppMaterialContextState extends State<AppMaterialContext> {
       debugShowCheckedModeBanner: false,
       title: 'Chikki',
       theme: ThemeData(),
-      initialRoute: AppRouteName.YHOME,
+      initialRoute: AppRouteName.WELCOME,
       routes: AppRoutes.routes,
     );
   }

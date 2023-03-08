@@ -108,7 +108,7 @@ class HomeMainBottomSheet extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12)
                         ),
                         onPressed: (){
-                          Navigator.of(context).pushNamed(AppRouteName.YHOME);
+                          Navigator.of(context).pushNamed(AppRouteName.YWELCOME);
                         },
                         child: Center(
                           child: Row(
@@ -151,7 +151,7 @@ class HomeMainBottomSheet extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12)
                         ),
                         onPressed: (){
-                          Navigator.of(context).pushNamed(AppRouteName.FOODHOME);
+                          Navigator.of(context).pushNamed(AppRouteName.FWELCOME);
                         },
                         child: Center(
                           child: Row(

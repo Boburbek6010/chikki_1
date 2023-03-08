@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:Chikki/src/features/taxi/settings/make_less.dart';
 import 'package:Chikki/src/features/yol_yolakay/home/view_model/y_home_vm.dart';
@@ -30,6 +31,17 @@ class YHomeScreen extends ConsumerWidget {
           centerTitle: true,
           title: CustomAppBar(
             onPressed: () => showAlertDialog(context),
+            backButton: (){
+              ref.read(yHomeVM).controller.future.whenComplete(() {
+                log('aaaa');
+                log('aaaa');
+                log('aaaa');
+                log('aaaa');
+                log('aaaa');
+                ref.read(yHomeVM).end();
+                Navigator.of(context).pop();
+              });
+            },
           ),
         ),
         body: ref.read(yHomeVM).currentLocation == null

@@ -106,4 +106,10 @@ class YHomeVm extends ChangeNotifier {
     return (await fi.image.toByteData(format: ui.ImageByteFormat.png))!.buffer.asUint8List();
   }
 
+  void end(){
+    markers.clear();
+    init();
+    notifyListeners();
+  }
+
 }

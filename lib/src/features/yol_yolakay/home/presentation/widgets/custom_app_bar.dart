@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
   final VoidCallback onPressed;
-  const CustomAppBar({Key? key, required this.onPressed}) : super(key: key);
+  final VoidCallback backButton;
+  const CustomAppBar({Key? key, required this.onPressed, required this.backButton}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +26,7 @@ class CustomAppBar extends StatelessWidget {
           children: [
             IconButton(
               splashRadius: 25,
-              onPressed: (){
-                Navigator.of(context).pop();
-              },
+              onPressed: backButton,
                 icon: const Icon(Icons.arrow_back, color: AppColors.black,)),
             const SizedBox(width: 20,),
             Column(
