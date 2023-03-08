@@ -27,6 +27,9 @@ dependencies:
   #map_launcher:
   yandex_mapkit: ^3.2.0
   geolocator: ^9.0.2
+  flutter_polyline_points: ^1.0.0
+  google_maps_flutter: ^2.2.5
+  location: ^4.4.0
 
 
   #locale storage

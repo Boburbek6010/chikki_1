@@ -1,5 +1,5 @@
 import '../../features/food/home/presentation/screens/food_catigories_screen.dart';
-import 'package:demo1/src/features/yol_yolakay/result/presentation/screens/result_screen.dart';
+import 'package:demo1/src/features/yol_yolakay/home/presentation/screens/y_home_screen.dart';
 
 import '../../features/taxi/order/presentation/screens/search_rout_screen.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +23,6 @@ class AppRoutes{
     AppRouteName.SEARCHROUTE: (context) =>   const SearchRoutScreen(),
     ///food
     AppRouteName.FOODHOME: (context) =>   const FoodCategory(),
-    AppRouteName.RESULT: (context) =>   const ResultScreen(),
+    AppRouteName.YHOME: (context) =>   const YHomeScreen(),
   };
 }

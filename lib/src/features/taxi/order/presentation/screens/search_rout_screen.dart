@@ -1,4 +1,3 @@
-import 'package:demo1/src/core/global_keys.dart';
 import 'package:demo1/src/data/entity/yandex_routes.dart';
 import 'package:demo1/src/features/taxi/order/view_model/search_route.dart';
 import 'package:demo1/src/features/taxi/settings/checker.dart';
@@ -8,7 +7,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:l/l.dart';
 
 import '../../../../../core/style/colors.dart';
-import '../../../menu/view_model/home_view_model.dart';
 import '../widgets/search_locations.dart';
 import '../widgets/search_route.dart';
 
