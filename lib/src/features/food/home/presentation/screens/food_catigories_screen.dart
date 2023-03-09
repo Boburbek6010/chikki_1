@@ -27,6 +27,7 @@ class FoodCategory extends StatelessWidget {
           onPressed: (){},
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.transparent,
+              elevation: 0,
               minimumSize:  const Size(17, 17),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50),

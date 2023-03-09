@@ -6,6 +6,7 @@ static const REGISTER = '/register';
 static const WELCOME = '/initial';
 static const SEARCHROUTE = '/searchRoute';
 static const RESULT = '/result_screen';
+static const ANNOUNCEMENTSREEN = '/announcement_screen';
 
 
 /// food

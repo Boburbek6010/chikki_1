@@ -9,6 +9,7 @@ import '../../features/taxi/login/presentation/screens/set_profile_screen.dart';
 import '../../features/taxi/menu/presentation/screens/home_screen.dart';
 import '../../features/taxi/welcome/presentation/screens/intro_screen.dart';
 import '../../features/taxi/welcome/presentation/screens/welcome_screen.dart';
+import '../../features/yol_yolakay/annouce/presentation/screens/annouce_screen.dart';
 import 'app_route_name.dart';
 
 @immutable
@@ -24,5 +25,6 @@ class AppRoutes{
     ///food
     AppRouteName.FOODHOME: (context) =>   const FoodCategory(),
     AppRouteName.RESULT: (context) =>   const ResultScreen(),
+    AppRouteName.ANNOUNCEMENTSREEN: (context) =>   const AnnouncementScreen(),
   };
 }
