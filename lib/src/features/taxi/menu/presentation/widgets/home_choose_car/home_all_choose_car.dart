@@ -1,7 +1,7 @@
-import 'package:demo1/src/core/style/colors.dart';
-import 'package:demo1/src/core/style/images.dart';
-import 'package:demo1/src/features/taxi/menu/presentation/widgets/home_choose_car/search.dart';
-import 'package:demo1/src/features/taxi/menu/view_model/home_view_model.dart';
+import 'package:Chikki/src/core/style/colors.dart';
+import 'package:Chikki/src/core/style/images.dart';
+import 'package:Chikki/src/features/taxi/menu/presentation/widgets/home_choose_car/search.dart';
+import 'package:Chikki/src/features/taxi/menu/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 
 import '../home_main_button.dart';

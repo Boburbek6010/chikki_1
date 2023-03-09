@@ -1,7 +1,7 @@
-import 'package:demo1/src/core/routes/app_route_name.dart';
-import 'package:demo1/src/features/taxi/menu/presentation/widgets/custom_locator.dart';
-import 'package:demo1/src/features/taxi/menu/presentation/widgets/home_drawer_builder.dart';
-import 'package:demo1/src/features/taxi/menu/presentation/widgets/home_main_button.dart';
+import 'package:Chikki/src/core/routes/app_route_name.dart';
+import 'package:Chikki/src/features/taxi/menu/presentation/widgets/custom_locator.dart';
+import 'package:Chikki/src/features/taxi/menu/presentation/widgets/home_drawer_builder.dart';
+import 'package:Chikki/src/features/taxi/menu/presentation/widgets/home_main_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../core/style/colors.dart';

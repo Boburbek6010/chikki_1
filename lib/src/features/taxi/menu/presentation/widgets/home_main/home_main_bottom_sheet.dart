@@ -1,5 +1,5 @@
-import 'package:demo1/src/core/routes/app_route_name.dart';
-import 'package:demo1/src/features/taxi/menu/presentation/widgets/home_drawer_builder.dart';
+import 'package:Chikki/src/core/routes/app_route_name.dart';
+import 'package:Chikki/src/features/taxi/menu/presentation/widgets/home_drawer_builder.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../core/style/colors.dart';
 import '../../../../../../core/style/images.dart';
@@ -108,7 +108,7 @@ class HomeMainBottomSheet extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12)
                         ),
                         onPressed: (){
-                          Navigator.of(context).pushNamed(AppRouteName.RESULT);
+                          Navigator.of(context).pushNamed(AppRouteName.YWELCOME);
                         },
                         child: Center(
                           child: Row(
@@ -151,7 +151,7 @@ class HomeMainBottomSheet extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12)
                         ),
                         onPressed: (){
-                          Navigator.of(context).pushNamed(AppRouteName.FOODHOME);
+                          Navigator.of(context).pushNamed(AppRouteName.FWELCOME);
                         },
                         child: Center(
                           child: Row(

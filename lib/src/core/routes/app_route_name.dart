@@ -10,5 +10,8 @@ static const ANNOUNCEMENTSREEN = '/announcement_screen';
 
 
 /// food
+static const YHOME = '/y_home_screen';
+static const FWELCOME = '/f_food_welcome_screen';
+static const YWELCOME = '/y_welcome_screen';
 static const FOODHOME = '/food_home';
 }

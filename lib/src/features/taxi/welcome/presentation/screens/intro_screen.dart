@@ -1,7 +1,7 @@
-import 'package:demo1/src/core/routes/app_route_name.dart';
-import 'package:demo1/src/core/style/images.dart';
-import 'package:demo1/src/features/taxi/menu/presentation/screens/home_screen.dart';
-import 'package:demo1/src/features/taxi/welcome/view_model/intro_view_model.dart';
+import 'package:Chikki/src/core/routes/app_route_name.dart';
+import 'package:Chikki/src/core/style/images.dart';
+import 'package:Chikki/src/features/taxi/menu/presentation/screens/home_screen.dart';
+import 'package:Chikki/src/features/taxi/welcome/view_model/intro_view_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

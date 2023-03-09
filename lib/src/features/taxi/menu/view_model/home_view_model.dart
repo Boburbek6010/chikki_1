@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:demo1/src/core/style/colors.dart';
+import 'package:Chikki/src/core/style/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluttertoast/fluttertoast.dart';

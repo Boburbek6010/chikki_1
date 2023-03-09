@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Demo1</string>
+	<string>Chikki</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>demo1</string>
+	<string>chikki</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -41,14 +41,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>The app needs the location</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>The app needs the location</string>
 	<key>NSPhotoLibraryUsageDescription</key>
     <string>Allow access your photo library</string>
     <key>NSCameraUsageDescription</key>
     <string>Allow access your phone's camera</string>
     <key>NSMicrophoneUsageDescription</key>
     <string>Allow the app to record using your phone's microphone</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Allow access your phone's location</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>

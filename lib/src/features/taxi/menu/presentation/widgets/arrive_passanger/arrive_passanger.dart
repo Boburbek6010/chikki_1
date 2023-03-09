@@ -1,5 +1,5 @@
-import 'package:demo1/src/features/taxi/menu/view_model/home_view_model.dart';
-import 'package:demo1/src/features/taxi/welcome/presentation/widgets/intro_button.dart';
+import 'package:Chikki/src/features/taxi/menu/view_model/home_view_model.dart';
+import 'package:Chikki/src/features/taxi/welcome/presentation/widgets/intro_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';

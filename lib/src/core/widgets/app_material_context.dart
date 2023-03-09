@@ -1,5 +1,5 @@
-import 'package:demo1/src/core/routes/app_route_name.dart';
-import 'package:demo1/src/core/routes/app_routes.dart';
+import 'package:Chikki/src/core/routes/app_route_name.dart';
+import 'package:Chikki/src/core/routes/app_routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
