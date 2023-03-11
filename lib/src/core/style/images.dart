@@ -141,6 +141,71 @@ class AppImages {
     fit: BoxFit.cover,
   );
 
+
+  /// Yul Yulakay
+  static final searchRout = Image.asset(
+    'assets/images/yol-yolakay/map.png',
+    height: 24,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
+  static final ratio = Image.asset(
+    'assets/images/yol-yolakay/red_ratio.png',
+    height: 14,
+    width: 14,
+    fit: BoxFit.cover,
+  );
+
+  static final person = Image.asset(
+    'assets/images/yol-yolakay/profile-2user.png',
+    height: 24,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
+  static final image1 = Image.asset(
+    'assets/images/yol-yolakay/image_1.png',
+    height: 40,
+    width: 40,
+    fit: BoxFit.cover,
+  );
+
+  static final image2 = Image.asset(
+    'assets/images/yol-yolakay/image_2.png',
+    height: 40,
+    width: 40,
+    fit: BoxFit.cover,
+  );
+
+  static final image3 = Image.asset(
+    'assets/images/yol-yolakay/image_3.png',
+    height: 40,
+    width: 40,
+    fit: BoxFit.cover,
+  );
+
+  static final image4 = Image.asset(
+    'assets/images/yol-yolakay/image_4.png',
+    height: 40,
+    width: 40,
+    fit: BoxFit.cover,
+  );
+
+  static final image5 = Image.asset(
+    'assets/images/yol-yolakay/image_5.png',
+    height: 40,
+    width: 40,
+    fit: BoxFit.cover,
+  );
+
+  static final calendar = Image.asset(
+    'assets/images/yol-yolakay/calendar.png',
+    height: 24,
+    width: 24,
+    fit: BoxFit.cover,
+  );
+
   /// taxi
 
 

@@ -1,9 +1,7 @@
-import 'package:Chikki/src/features/food/welcome/screens/f_welcome_screen.dart';
-import 'package:Chikki/src/features/yol_yolakay/welcome/screens/y_welcome_screen.dart';
 
 import '../../features/food/home/presentation/screens/food_catigories_screen.dart';
-import 'package:Chikki/src/features/yol_yolakay/home/presentation/screens/y_home_screen.dart';
 
+import '../../features/food/welcome/screens/f_welcome_screen.dart';
 import '../../features/taxi/order/presentation/screens/search_rout_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +11,8 @@ import '../../features/taxi/menu/presentation/screens/home_screen.dart';
 import '../../features/taxi/welcome/presentation/screens/intro_screen.dart';
 import '../../features/taxi/welcome/presentation/screens/welcome_screen.dart';
 import '../../features/yol_yolakay/annouce/presentation/screens/annouce_screen.dart';
+import '../../features/yol_yolakay/home/presentation/screens/y_home_screen.dart';
+import '../../features/yol_yolakay/welcome/screens/y_welcome_screen.dart';
 import 'app_route_name.dart';
 
 @immutable
@@ -26,7 +26,7 @@ class AppRoutes{
     AppRouteName.REGISTER: (context) => const RegisterScreen(),
     AppRouteName.SEARCHROUTE: (context) =>   const SearchRoutScreen(),
     AppRouteName.FOODHOME: (context) =>   const FoodCategory(),
-    AppRouteName.RESULT: (context) =>   const ResultScreen(),
+     // AppRouteName.RESULT: (context) =>   const ResultScreen(),
     AppRouteName.ANNOUNCEMENTSREEN: (context) =>   const AnnouncementScreen(),
     AppRouteName.YHOME: (context) =>   const YHomeScreen(),
     AppRouteName.YWELCOME: (context) =>   const YWelcomeScreen(),
